@@ -1,9 +1,7 @@
 class BookmarkController < ApplicationController
+  include ApiActions
+
   def index
-
-  end
-
-  def create
 
   end
 
@@ -16,14 +14,6 @@ class BookmarkController < ApplicationController
   end
 
   def show
-
-  end
-
-  def update
-
-  end
-
-  def destroy
 
   end
 end
