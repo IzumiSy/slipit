@@ -16,7 +16,6 @@
 <% end %>
 
 <% if @bookmarks.length > 0 then %>
-  <!--
   <div class="ui cards">
     <%= render partial: "card", locals: {
       header: "All over the world",
@@ -24,22 +23,7 @@
       description: "Hello world guys",
       extra: "testament"
     } %>
-
-    <%= render partial: "card", locals: {
-      header: "All over the world",
-      meta: "2 days ago",
-      description: "Hello world guys",
-      extra: "testament"
-    } %>
-
-    <%= render partial: "card", locals: {
-      header: "All over the world",
-      meta: "2 days ago",
-      description: "Hello world guys",
-      extra: "testament"
-    } %>
   </div>
-  -->
 <% else %>
   <%= render partial: "nobookmark" %>
 <% end %>
