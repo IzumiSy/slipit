@@ -18,6 +18,6 @@ module ApiActions
   end
 
   def search
-
+    render action: 'results'
   end
 end
