@@ -16,8 +16,4 @@ module ApiActions
   def destroy
 
   end
-
-  def search
-    render action: 'results'
-  end
 end

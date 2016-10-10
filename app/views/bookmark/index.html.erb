@@ -8,7 +8,7 @@
   { class: "positive ui right floated button" }
 %>
 
-<%= form_tag controller: 'bookmark', action: 'search' do %>
+<%= form_tag({ controller: 'bookmark', action: 'search'}, { method: 'get' }) do %>
   <div class="ui icon input">
     <%= text_field_tag :search %>
     <i class="search icon"></i>
