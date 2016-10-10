@@ -16,4 +16,8 @@ module ApiActions
   def destroy
 
   end
+
+  def search
+
+  end
 end

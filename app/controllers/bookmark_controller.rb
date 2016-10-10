@@ -13,4 +13,8 @@ class BookmarkController < ApplicationController
 
   def show
   end
+
+  def results
+    @search_results = []
+  end
 end
