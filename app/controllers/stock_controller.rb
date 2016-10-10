@@ -1,2 +1,0 @@
-class StockController < ApplicationController
-end
