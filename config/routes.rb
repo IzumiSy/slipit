@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :bookmark, except: [:show] do
     collection do
-      get 'search'
+      post 'search'
+      get 'results'
     end
   end
 
