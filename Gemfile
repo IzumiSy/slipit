@@ -8,6 +8,9 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # gem 'therubyracer', platforms: :ruby
 
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem 'font-awesome-rails'
+
 gem 'jquery-rails'
 gem 'turbolinks'
 
