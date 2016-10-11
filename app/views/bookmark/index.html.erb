@@ -5,11 +5,11 @@
 <%=
   link_to 'Add a bookmark',
   { controller: 'bookmark', action: 'new' },
-  { class: "positive ui right floated button" }
+  { class: "positive ui right floated small button" }
 %>
 
 <%= form_tag({ controller: 'bookmark', action: 'search'}, { method: 'get' }) do %>
-  <div class="ui icon input">
+  <div class="ui icon small input">
     <%= text_field_tag :search %>
     <i class="search icon"></i>
   </div>
