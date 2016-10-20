@@ -7,6 +7,7 @@ module ApiActions
 
   def create
     @bookmark = Bookmark.create(bookmark_params)
+    return redirect_to :root
   end
 
   def update
