@@ -6,7 +6,8 @@ module ApiActions
   end
 
   def create
-
+    @bookmark = Bookmark.create(bookmark_params)
+    return redirect_to :root
   end
 
   def update
@@ -15,5 +16,11 @@ module ApiActions
 
   def destroy
 
+  end
+
+  private
+
+  def bookmark_params
+    params.require(:bookmark).permit(:title, :description)
   end
 end

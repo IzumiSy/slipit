@@ -1,0 +1,17 @@
+<%= form_for(@bookmark, url: '/bookmark/new', html: { class: 'ui form' }) do |f| %>
+  <div class="field">
+
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <%= f.submit 'Submit', class: 'ui button' %>
+<% end %>
