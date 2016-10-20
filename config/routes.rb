@@ -1,17 +1,12 @@
 Rails.application.routes.draw do
-  resources :bookmark, except: [:show] do
+  resources :bookmark, except: [:show, :create] do
     collection do
+      post 'new', to: 'bookmark#create'
       get 'search'
     end
   end
 
   root 'bookmark#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route with sub-resources:
   #   resources :products do
