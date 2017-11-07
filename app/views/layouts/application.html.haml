@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title SlipIt
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .ui.fixed.inverted.menu
+      .ui.container
+        %a.header.item{href: "#"}
+          %img.logo{src: "https://semantic-ui.com/examples/assets/images/logo.png"}/
+          Slip.it
+    .ui.main.container
+      = yield
