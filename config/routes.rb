@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
-  resources :bookmark, except: [:show, :create] do
-    collection do
-      post 'new', to: 'bookmark#create'
-      get 'search'
-    end
-  end
-
-  root 'bookmark#index'
+  resources :bookmarks
 
   # Example resource route with sub-resources:
   #   resources :products do

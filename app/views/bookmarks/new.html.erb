@@ -1,8 +1,4 @@
-<%= form_for(@bookmark, url: '/bookmark/new', html: { class: 'ui form' }) do |f| %>
-  <div class="field">
-
-  </div>
-
+<%= form_for @bookmark, html: { class: 'ui form' } do |f| %>
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title, required: true, autocomplete: 'off' %>
@@ -15,6 +11,6 @@
 
   <div class="field">
     <%= f.submit 'Submit', class: 'ui primary button' %>
-    <%= link_to 'Cancel', { controller: 'bookmark', action: 'index' }, { class: 'ui button' } %>
+    <%= link_to 'Cancel', bookmarks_path, { class: 'ui button' } %>
   </div>
 <% end %>

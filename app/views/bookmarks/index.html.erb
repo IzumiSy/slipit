@@ -2,18 +2,7 @@
   Bookmarks
 </h2>
 
-<%=
-  link_to 'Add a bookmark',
-  { controller: 'bookmark', action: 'new' },
-  { class: "positive ui right floated small button" }
-%>
-
-<%= form_tag({ controller: 'bookmark', action: 'search'}, { method: 'get' }) do %>
-  <div class="ui icon small input">
-    <%= text_field_tag :search %>
-    <i class="search icon"></i>
-  </div>
-<% end %>
+<%= link_to 'Add a bookmark', new_bookmark_path, { class: "positive ui right floated small button" } %>
 
 <% if @bookmarks.length > 0 then %>
   <div class="ui cards">
