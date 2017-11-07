@@ -17,14 +17,20 @@
 
 <% if @bookmarks.length > 0 then %>
   <div class="ui cards">
-    <%= render partial: "card", locals: {
-      header: "All over the world",
-      meta: "2 days ago",
-      description: "Hello world guys",
-      extra: "testament"
-    } %>
+    <%= render "bookmark/shared/card", header: "All over the world",
+      meta: "2 days ago", description: "Hello world guys", extra: "testament" %>
   </div>
 <% else %>
-  <%= render partial: "nobookmark" %>
+  <div class="ui cube shape nobookmark-placeholder">
+    <div class="sides">
+      <div class="active side">
+        <div class="content">
+          <div class="center">
+            Looks like nothing here :(
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
 
