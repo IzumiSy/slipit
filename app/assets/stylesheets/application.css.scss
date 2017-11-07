@@ -22,29 +22,24 @@ html, body {
   padding: 0;
 }
 
-.article {
-  margin-top: 50px;
+.header.item img.logo {
+  margin-right: 1.5em !important;
 }
 
-.ui.attached.toggle.button {
-  margin-bottom: 0.5px;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  background-color: inherit;
+.main.container {
+  margin-top: 7em;
 }
 
-.pusher {
-  .ui.dividing.header.title {
-    padding-bottom: 10px;
-  }
+.ui.dividing.header.title {
+  padding-bottom: 10px;
+}
 
-  .nobookmark-placeholder {
-    padding: 0;
-    width: 100%;
+.nobookmark-placeholder {
+  padding: 0;
+  width: 100%;
 
-    .center {
-      color: #9f9f9f;
-    }
+  .center {
+    color: #9f9f9f;
   }
 }
 

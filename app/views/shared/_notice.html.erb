@@ -2,8 +2,7 @@
   <div class="ui positive message">
     <i class="close icon"></i>
     <div class="header">
-      Yay
+      <%= simple_format notice, {}, wrapper_tag: 'div' %>
     </div>
-    <%= simple_format notice, {}, wrapper_tag: 'p' %>
   </div>
 <% end %>

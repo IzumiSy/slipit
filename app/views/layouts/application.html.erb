@@ -6,55 +6,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="minimal pushable">
-    <div class="ui sidebar inverted vertical menu">
-      <div class="item">
-      </div>
 
-      <%= link_to 'Home', bookmarks_path, { class: 'item' } %>
-
-      <div class="item">
-        <div class="header">
-          Tags
-        </div>
-        <div class="menu">
-          <a class="item">
-            grape
-          </a>
-          <a class="item">
-            banana
-          </a>
-          <a class="item">
-            orange
-          </a>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="header">
-          Other
-        </div>
-        <div class="menu">
-          <a class="item">
-            Manage tags
-          </a>
-          <a class="item">
-            Manage bookmarks
-          </a>
-        </div>
+  <body>
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="#" class="header item">
+          <img class="logo" src="https://semantic-ui.com/examples/assets/images/logo.png" />
+          Slip.it
+        </a>
       </div>
     </div>
 
-    <div class="ui black launch right attached fixed toggle button">
-      <i class="content icon"></i>
-      <span class="text">Menu</span>
-    </div>
-
-    <div class="pusher">
-      <div class="article">
-        <div class="main ui container">
-          <%= yield %>
-      </div>
+    <div class="ui main container">
+      <%= yield %>
     </div>
   </body>
 </html>
