@@ -4,9 +4,9 @@
   .content
     %p Are you sure you will delete this bookmark?
   .actions
-    .ui.negative.button
+    .ui.button
       No
-    .ui.positive.button
+    = link_to bookmark_path(bookmark.id), method: :delete, class: "ui negative button" do
       Yes
 
 = link_to bookmark.url, { class: "bookmark-item card", target: "_blank" } do
