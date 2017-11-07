@@ -4,10 +4,14 @@
 
 <%= link_to 'Add a bookmark', new_bookmark_path, { class: "positive ui right floated small button" } %>
 
-<% if @bookmarks.length > 0 then %>
-  <div class="ui cards">
-    <%= render "bookmark/shared/card", header: "All over the world",
-      meta: "2 days ago", description: "Hello world guys", extra: "testament" %>
+<% if @bookmarks.present? %>
+  <div class="ui cube shape">
+    <%- @bookmarks.each do |bookmark| %>
+      <div class="ui cards">
+        <%= render "bookmarks/shared/card", header: bookmark.title,
+          meta: "2 days ago", description: bookmark.description, extra: "testament" %>
+      </div>
+    <% end %>
   </div>
 <% else %>
   <div class="ui cube shape nobookmark-placeholder">
