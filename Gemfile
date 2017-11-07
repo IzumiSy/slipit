@@ -32,6 +32,7 @@ group :development, :test do
   gem 'hirb-unicode'
 
   gem 'spring'
+  gem 'listen'
 end
 
 group :production do
