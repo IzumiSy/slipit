@@ -5,16 +5,14 @@ ruby '2.4.1'
 gem 'rails', '5.1.4'
 
 gem 'uglifier', '>= 1.3.0'
+gem 'turbolinks'
+
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0.5'
 gem 'coffee-rails', '~> 4.2.1'
 
-# gem 'therubyracer', platforms: :ruby
-
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'font-awesome-rails'
-
-gem 'jquery-rails'
-gem 'turbolinks'
 
 gem 'puma'
 
