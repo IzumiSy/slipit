@@ -5,3 +5,14 @@
 > Slip.it is a small self-hostable bookmark webapp built with Ruby on Rails.  
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+### Setup
+```sh
+$ bundle exec rake db:create
+$ bundle exec rake db:migrate
+```
+
+### Run
+```sh
+$ bundle exec rails s
+```
