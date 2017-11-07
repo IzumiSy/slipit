@@ -45,6 +45,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     awesome_print (1.8.0)
     better_errors (2.4.0)
@@ -110,6 +112,7 @@ GEM
       coolline (~> 0.5)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
+    public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
     rack-test (0.7.0)
@@ -180,6 +183,9 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (0.1.1)
     unicode_utils (1.4.0)
+    validate_url (1.0.2)
+      activemodel (>= 3.0.0)
+      addressable
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -214,6 +220,7 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
+  validate_url
   web-console
 
 RUBY VERSION

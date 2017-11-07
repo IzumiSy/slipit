@@ -16,6 +16,8 @@ gem 'font-awesome-rails'
 
 gem 'puma'
 
+gem 'validate_url'
+
 group :development, :test do
   gem 'sqlite3'
 
