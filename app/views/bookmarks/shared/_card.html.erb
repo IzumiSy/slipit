@@ -1,16 +1,17 @@
-<div class="card">
-  <div class="content">
-    <div class="header">
-      <%= header %>
+<%= link_to bookmark.url, { class: "card", target: "_blank" } do %>
+    <div class="content">
+      <div class="header">
+        <%= image_tag favicon(bookmark.url), class: "favicon" %>
+        <%= bookmark.title %>
+      </div>
+      <div class="meta">
+        <%= "#{distance_of_time_in_words(Time.now, bookmark.created_at)} ago" %>
+      </div>
+      <div class="description">
+        <p><%= bookmark.description %></p>
+      </div>
     </div>
-    <div class="meta">
-      <%= meta %>
+    <div class="extra content">
+      <%= bookmark.url %>
     </div>
-    <div class="description">
-      <p><%= description %></p>
-    </div>
-  </div>
-  <div class="extra content">
-    <%= extra %>
-  </div>
-</div>
+<% end %>

@@ -56,6 +56,10 @@ html, body {
     -moz-transform: translate(1px, 1px);
   }
 
+  img.favicon {
+    margin-top: -4px;
+  }
+
   .extra.content {
     font-size: 12px;
     white-space: nowrap;

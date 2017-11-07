@@ -8,8 +8,7 @@
 <% if @bookmarks.present? %>
   <div class="ui four stackable cards bookmark-list">
     <%- @bookmarks.each do |bookmark| %>
-      <%= render "bookmarks/shared/card", header: bookmark.title,
-        meta: "2 days ago", description: bookmark.description, extra: bookmark.url %>
+      <%= render "bookmarks/shared/card", bookmark: bookmark %>
     <% end %>
   </div>
 <% else %>
