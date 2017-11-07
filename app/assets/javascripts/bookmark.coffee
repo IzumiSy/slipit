@@ -6,3 +6,6 @@ $(document).on 'turbolinks:load', ->
   $('.ui.sidebar')
     .sidebar('setting', 'transition', 'overlay')
     .sidebar('attach events', '.toggle.button', 'toggle')
+
+  $('#remove-bookmark, #edit-bookmark').on 'click', (e) ->
+    e.preventDefault()

@@ -55,12 +55,12 @@ html, body {
     margin-top: -4px;
   }
 
-  .remove.icon {
+  .remove.icon, .edit.icon {
     display: none;
   }
 
   &:hover {
-    .remove.icon {
+    .remove.icon, .edit.icon {
       display: block;
       color: grey;
       margin: 0;
