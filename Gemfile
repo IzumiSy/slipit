@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2.1'
 
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'font-awesome-rails'
+gem 'meta-tags'
 
 gem 'puma'
 
