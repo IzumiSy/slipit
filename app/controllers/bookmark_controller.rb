@@ -1,6 +1,4 @@
 class BookmarkController < ApplicationController
-  include ApiActions
-
   def index
     @bookmarks = []
   end
