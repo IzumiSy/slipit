@@ -12,7 +12,7 @@
 = link_to bookmark.url, { class: "bookmark-item card", target: "_blank" } do
   .content
     %i.right.floated.remove.icon{ data: { modal: bookmark.id } }
-    %i.right.floated.edit.icon
+    %i.right.floated.edit.icon{ data: { link: edit_bookmark_path(bookmark.id) } }
     .header
       = image_tag favicon(bookmark.url), class: "favicon"
       = bookmark.title

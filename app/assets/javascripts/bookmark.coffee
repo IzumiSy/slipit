@@ -8,6 +8,8 @@ $(document).on 'turbolinks:load', ->
     .sidebar('attach events', '.toggle.button', 'toggle')
 
   $('.bookmark-item .edit.icon').on 'click', (e) ->
+    editLink = $(@).attr('data-link')
+    location.href = editLink
     e.preventDefault()
 
   $('.bookmark-item .remove.icon').on 'click', (e) ->
