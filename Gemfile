@@ -16,6 +16,8 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+gem 'puma'
+
 group :development, :test do
   gem 'sqlite3'
 
