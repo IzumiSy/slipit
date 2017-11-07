@@ -21,3 +21,41 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.article {
+  margin-top: 50px;
+}
+
+.ui.attached.toggle.button {
+  margin-bottom: 0.5px;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background-color: inherit;
+}
+
+.pusher {
+  .ui.dividing.header.title {
+    padding-bottom: 10px;
+  }
+
+  .nobookmark-placeholder {
+    padding: 0;
+    margin-top: 30px;
+    width: 100%;
+
+    .center {
+      color: #9f9f9f;
+    }
+  }
+}
+
+.bookmark-list {
+  .ui.cards > .card {
+    cursor: pointer;
+
+    &:hover {
+      -webkit-transform: translate(1px, 1px);
+      -moz-transform: translate(1px, 1px);
+    }
+  }
+}

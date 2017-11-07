@@ -2,16 +2,17 @@
 
 <h2 class="ui dividing header title">
   Bookmarks
+  <%= link_to 'Add a bookmark', new_bookmark_path, { class: "positive ui right floated small button" } %>
 </h2>
 
-<%= link_to 'Add a bookmark', new_bookmark_path, { class: "positive ui right floated small button" } %>
-
 <% if @bookmarks.present? %>
-  <div class="ui cube shape">
+  <div class="ui four column stackable grid bookmark-list">
     <%- @bookmarks.each do |bookmark| %>
-      <div class="ui cards">
-        <%= render "bookmarks/shared/card", header: bookmark.title,
-          meta: "2 days ago", description: bookmark.description, extra: "testament" %>
+      <div class="column">
+        <div class="ui cards">
+          <%= render "bookmarks/shared/card", header: bookmark.title,
+            meta: "2 days ago", description: bookmark.description, extra: "testament" %>
+        </div>
       </div>
     <% end %>
   </div>
