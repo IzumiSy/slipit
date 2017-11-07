@@ -1,7 +1,18 @@
-= link_to bookmark.url, { class: "card", target: "_blank" } do
+.ui.mini.modal{ id: "remove-modal-#{bookmark.id}" }
+  .header
+    Remove a bookmark
   .content
-    %i.right.floated.remove.icon#remove-bookmark
-    %i.right.floated.edit.icon#edit-bookmark
+    %p Are you sure you will delete this bookmark?
+  .actions
+    .ui.negative.button
+      No
+    .ui.positive.button
+      Yes
+
+= link_to bookmark.url, { class: "bookmark-item card", target: "_blank" } do
+  .content
+    %i.right.floated.remove.icon{ data: { modal: bookmark.id } }
+    %i.right.floated.edit.icon
     .header
       = image_tag favicon(bookmark.url), class: "favicon"
       = bookmark.title

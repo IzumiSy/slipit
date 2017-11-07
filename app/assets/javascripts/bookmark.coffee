@@ -7,5 +7,10 @@ $(document).on 'turbolinks:load', ->
     .sidebar('setting', 'transition', 'overlay')
     .sidebar('attach events', '.toggle.button', 'toggle')
 
-  $('#remove-bookmark, #edit-bookmark').on 'click', (e) ->
+  $('.bookmark-item .edit.icon').on 'click', (e) ->
+    e.preventDefault()
+
+  $('.bookmark-item .remove.icon').on 'click', (e) ->
+    modalId = $(@).attr('data-modal')
+    $("#remove-modal-#{modalId}").modal('show')
     e.preventDefault()
