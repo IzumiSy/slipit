@@ -49,13 +49,18 @@ html, body {
   }
 }
 
-.bookmark-list {
-  .ui.cards > .card {
-    cursor: pointer;
+.bookmark-list.ui.cards .card {
+  cursor: pointer;
 
-    &:hover {
-      -webkit-transform: translate(1px, 1px);
-      -moz-transform: translate(1px, 1px);
-    }
+  &:hover {
+    -webkit-transform: translate(1px, 1px);
+    -moz-transform: translate(1px, 1px);
+  }
+
+  .extra.content {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

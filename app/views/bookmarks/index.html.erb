@@ -6,14 +6,10 @@
 </h2>
 
 <% if @bookmarks.present? %>
-  <div class="ui four column stackable grid bookmark-list">
+  <div class="ui four stackable cards bookmark-list">
     <%- @bookmarks.each do |bookmark| %>
-      <div class="column">
-        <div class="ui cards">
-          <%= render "bookmarks/shared/card", header: bookmark.title,
-            meta: "2 days ago", description: bookmark.description, extra: "testament" %>
-        </div>
-      </div>
+      <%= render "bookmarks/shared/card", header: bookmark.title,
+        meta: "2 days ago", description: bookmark.description, extra: bookmark.url %>
     <% end %>
   </div>
 <% else %>
