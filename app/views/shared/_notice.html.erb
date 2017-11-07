@@ -1,0 +1,9 @@
+<% if notice %>
+  <div class="ui positive message">
+    <i class="close icon"></i>
+    <div class="header">
+      Yay
+    </div>
+    <%= simple_format notice, {}, wrapper_tag: 'p' %>
+  </div>
+<% end %>
