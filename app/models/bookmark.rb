@@ -1,2 +1,2 @@
-class Bookmark < ActiveRecord::Base
+class Bookmark < ApplicationRecord
 end
