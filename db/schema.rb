@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107072808) do
+ActiveRecord::Schema.define(version: 20171107152825) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "title"
-    t.string "description"
-    t.string "url"
+    t.string "title", null: false
+    t.string "description", default: "", null: false
+    t.string "url", null: false
   end
 
   create_table "tags", force: :cascade do |t|
