@@ -1,0 +1,11 @@
+= link_to bookmark.url, { class: "card", target: "_blank" } do
+  .content
+    .header
+      = image_tag favicon(bookmark.url), class: "favicon"
+      = bookmark.title
+    .meta
+      = "#{distance_of_time_in_words(Time.now, bookmark.created_at)} ago"
+    .description
+      %p= bookmark.description
+  .extra.content
+    = bookmark.url

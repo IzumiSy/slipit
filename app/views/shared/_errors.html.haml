@@ -1,0 +1,5 @@
+- if resource.errors.present?
+  .ui.negative.message
+    %i.close.icon
+    .header
+      = resource.errors.full_messages.first

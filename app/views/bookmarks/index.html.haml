@@ -1,0 +1,15 @@
+= render "shared/notice"
+%h2.ui.dividing.header.title
+  Bookmarks
+  \#{link_to 'Add a bookmark', new_bookmark_path, { class: "positive ui right floated small button" }}
+- if @bookmarks.present?
+  .ui.four.stackable.cards.bookmark-list
+    - @bookmarks.each do |bookmark|
+      = render "bookmarks/shared/card", bookmark: bookmark
+- else
+  .ui.cube.shape.nobookmark-placeholder
+    .sides
+      .active.side
+        .content
+          .center
+            Looks like nothing here :(
