@@ -1,6 +1,7 @@
-= link_to bookmark.url, { class: "card", target: "_blank" } do
+.card
   .content
-    .header
+    %i.right.floated.remove.icon
+    = link_to bookmark.url, { class: "header", target: "_blank" } do
       = image_tag favicon(bookmark.url), class: "favicon"
       = bookmark.title
     .meta

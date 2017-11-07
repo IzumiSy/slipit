@@ -55,6 +55,22 @@ html, body {
     margin-top: -4px;
   }
 
+  .remove.icon {
+    display: none;
+  }
+
+  &:hover {
+    .remove.icon {
+      display: block;
+      color: grey;
+      margin: 0;
+
+      &:hover {
+        color: #FE9A76;
+      }
+    }
+  }
+
   .extra.content {
     font-size: 12px;
     white-space: nowrap;
