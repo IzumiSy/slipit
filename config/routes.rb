@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'bookmarks#index'
+
   resources :bookmarks
 
   # Example resource route with sub-resources:
