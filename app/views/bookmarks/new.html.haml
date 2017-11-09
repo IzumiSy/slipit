@@ -1,14 +1,2 @@
 = render "shared/errors", resource: @bookmark
-= form_for @bookmark, html: { class: 'ui form' } do |f|
-  .field
-    = f.label :title
-    = f.text_field :title, required: true, autocomplete: 'off'
-  .field
-    = f.label :url
-    = f.text_field :url, required: true, autocomplete: 'off', placeholder: "http://"
-  .field
-    = f.label :description
-    = f.text_field :description, autocomplete: 'off'
-  .field
-    = f.submit 'Submit', class: 'ui primary button'
-    = link_to 'Cancel', bookmarks_path, { class: 'ui button' }
+= render "bookmarks/shared/form"
