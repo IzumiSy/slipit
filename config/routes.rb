@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :bookmarks
 
+  scope module: :static_pages do
+    get 'bookmarklet'
+  end
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

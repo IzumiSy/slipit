@@ -24,8 +24,15 @@
   %body
     .ui.fixed.inverted.menu
       .ui.container
-        %a.header.item{href: "#"}
+        = link_to root_path, class: "header item" do
           %img.logo{src: asset_path("logo_small.png")}/
           Slip.it
+        .ui.simple.dropdown.item.right.floated
+          Preference
+          %i.dropdown.icon
+          .menu
+            = link_to "Bookmarklet", bookmarklet_path, class: "item"
+        // %a.ui.inverted.button Log in
+        // %a.ui.inverted.button Sign up
     .ui.main.container
       = yield
