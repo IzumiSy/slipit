@@ -6,10 +6,12 @@ class StaticPagesController < ApplicationController
   #
 
   def bookmarklet
+    host = Rails.env.development? ?
+      "localhost:#{request.port}" : request.host
     @src = <<-SRC
 javascript:(
   function() {
-    window.open('http://#{request.host}:#{request.port}/#{new_bookmark_path}' +
+    window.open('http://#{host}/#{new_bookmark_path}' +
       '?title=' + encodeURI(document.title) + '&url=' + encodeURI(location.href));
   }
 )();
