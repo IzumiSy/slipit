@@ -3,6 +3,10 @@
     = image_tag asset_path("logo_small.png"), class: "image"
     .content
       Sign up to Slip.it
+  - if @user.errors.present?
+    .ui.warning.message
+      .header
+        = simple_format @user.errors.full_messages.first, {}, wrapper_tag: 'div'
   = form_for @user, html: { class: "ui large form" } do |f|
     .ui.stacked.segment
       .ui.field
