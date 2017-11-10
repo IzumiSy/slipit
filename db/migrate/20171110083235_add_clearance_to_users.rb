@@ -1,6 +1,7 @@
 class AddClearanceToUsers < ActiveRecord::Migration[5.1]
   def self.up
     create_table :users do |t|
+      t.string :email, null: false
       t.timestamps null: false
     end
 
