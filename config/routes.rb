@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   scope module: :clearance do
-    # resources :passwords, controller: "clearance/passwords", only: [:create, :new]
+    resources :passwords, only: [:create, :new]
     resource :session, controller: :sessions, only: [:create]
-    resources :users, controller: :users, only: [:create] do
-      # resource :password, controller: "clearance/passwords", only: [:create, :edit, :update]
+    resources :users, only: [:create] do
+      resource :password, controller: :passwords, only: [:create, :edit, :update]
     end
 
     get "/sign_in", to: "sessions#new", as: "sign_in"
