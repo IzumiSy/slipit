@@ -20,10 +20,6 @@ Rails.application.routes.draw do
     get 'bookmarklet'
   end
 
-  namespace :api do
-    resource :bookmarks, only: %i(create)
-  end
-
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
