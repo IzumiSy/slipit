@@ -1,7 +1,7 @@
 .ui.main.container
   %h1 Bookmarklet
   %p You can use a bookmarklet with the javascript code above. With this bookmarklet, you can add a new bookmark with one click.
-  %a.ui.basic.button{href: @bookmarklet_js}
+  %a.ui.basic.button{href: @bookmarklet}
     %i.icon.external
     Bookmark this link
 
@@ -9,4 +9,4 @@
   .ui.ignored.message
     %pre
       %code{style: 'font-family: "Courier New", Consolas, monospace;'}
-        = @bookmarklet_js
+        = @src
