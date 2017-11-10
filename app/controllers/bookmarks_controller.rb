@@ -6,7 +6,7 @@ class BookmarksController < ApplicationController
   end
 
   def new
-    @bookmark = Bookmark.new
+    @bookmark = Bookmark.new(new_bookmark_permitted_params)
   end
 
   def create
@@ -44,5 +44,9 @@ class BookmarksController < ApplicationController
 
   def bookmark_permitted_params
     params.require(:bookmark).permit(:title, :url, :description)
+  end
+
+  def new_bookmark_permitted_params
+    params.permit(:title, :url)
   end
 end
