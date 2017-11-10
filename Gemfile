@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 
 gem 'rails', '5.1.4'
+gem 'clearance'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks'

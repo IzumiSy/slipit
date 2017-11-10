@@ -49,6 +49,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     awesome_print (1.8.0)
+    bcrypt (3.1.11)
     better_errors (2.4.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -56,6 +57,10 @@ GEM
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.1.0)
+    clearance (1.16.1)
+      bcrypt
+      email_validator (~> 1.4)
+      rails (>= 3.1)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -68,6 +73,8 @@ GEM
     coolline (0.5.0)
       unicode_utils (~> 1.4)
     crass (1.0.2)
+    email_validator (1.6.0)
+      activemodel
     erubi (1.7.0)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -222,6 +229,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   better_errors
+  clearance
   coffee-rails (~> 4.2.1)
   font-awesome-rails
   haml-rails (~> 1.0)
