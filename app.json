@@ -1,6 +1,14 @@
 {
   "name": "slip.it",
   "description": "Self-hosting bookmark webapp",
-  "keywords": ["bookmark"],
+  "keywords": [
+    "rails",
+    "bookmark",
+    "bookmark-manager"
+  ],
   "repository": "https://github.com/IzumiSy/slip.it"
+  "buildpacks": [
+    { "url": "heroku/node" },
+    { "url": "heroku/ruby" }
+  ]
 }
