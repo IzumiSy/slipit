@@ -3,6 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'turbolinks:load', ->
+  $('.ellipsis').dotdotdot();
+
   $('.ui.sidebar')
     .sidebar('setting', 'transition', 'overlay')
     .sidebar('attach events', '.toggle.button', 'toggle')
