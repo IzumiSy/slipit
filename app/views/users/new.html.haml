@@ -2,12 +2,8 @@
   %h2.ui.grey.image.header
     = image_tag "logo_small", class: "image"
     .content
-      Login to Slip.it
-  - if notice
-    .ui.warning.message
-      .header
-        = simple_format notice, {}, wrapper_tag: 'div'
-  = form_for :session, url: session_path, html: { class: "ui large form" } do |f|
+      Sign up to Slip.it
+  = form_for @user, html: { class: "ui large form" } do |f|
     .ui.stacked.segment
       .ui.field
         .ui.left.icon.input
@@ -17,8 +13,7 @@
         .ui.left.icon.input
           %i.lock.icon
           = f.password_field :password, placeholder: "Password", required: true
-      = f.submit "Login", class: "ui fluid large teal submit button"
-  .ui.message
-    New to Slip.it?
-    = link_to "Sign up", sign_up_path
-
+      = f.submit "Sign up", class: "ui fluid large teal submit button"
+    .ui.message
+      Already have an account?
+      = link_to "Sign in", sign_in_path
