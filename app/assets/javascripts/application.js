@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require dotdotdot/src/js/jquery.dotdotdot.min
+//= require clamp-js/clamp
 //= require turbolinks
 //= require semantic-ui
 //= require_tree .
