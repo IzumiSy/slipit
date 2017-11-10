@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  before_action :require_login
+
   #
   # NOTE: Only this controller does not follow a RESTful resource rule
   #

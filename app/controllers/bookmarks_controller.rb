@@ -1,4 +1,6 @@
 class BookmarksController < ApplicationController
+  before_action :require_login
+
   def index
     @bookmarks = Bookmark.all
   end
