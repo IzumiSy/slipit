@@ -14,5 +14,6 @@ $ bundle exec rake db:migrate
 
 ### Run
 ```sh
+$ bundle exec rails dev:cache
 $ bundle exec rails s
 ```
