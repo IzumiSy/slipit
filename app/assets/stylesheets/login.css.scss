@@ -1,0 +1,16 @@
+body > .ui.login {
+  padding-top: 10rem !important;
+
+  .column {
+    max-width: 450px;
+  }
+
+  .ui.stacked.segment {
+    padding-bottom: 1em;
+
+    &:after {
+      border-top: none;
+      background: none;
+    }
+  }
+}
