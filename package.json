@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "dependencies": {
+    "dotdotdot": "^1.7.0"
+  }
+}
