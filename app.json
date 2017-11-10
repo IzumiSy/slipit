@@ -8,6 +8,10 @@
     "bookmark-manager"
   ],
   "repository": "https://github.com/IzumiSy/slip.it",
+  "addons": [
+    { "plan": "heroku-postgresql" },
+    { "plan": "heroku-redis" }
+  ],
   "buildpacks": [
     { "url": "heroku/node" },
     { "url": "heroku/ruby" }
