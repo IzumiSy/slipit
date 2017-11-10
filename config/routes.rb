@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   scope module: :clearance do
     resources :passwords, only: [:create, :new]
-    resources :users, only: [:create] do
+    resources :users, only: [] do
       resource :password, controller: :passwords, only: [:create, :edit, :update]
     end
 
@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     post "/sign_in", to: "sessions#create", as: :session
 
     get "/sign_up", to: "users#new", as: "sign_up"
+    post "/sign_up", to: "users#create", as: :users
+
     delete "/sign_out", to: "sessions#destroy", as: "sign_out"
   end
 
