@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
     @src = <<-SRC
 javascript:(
   function() {
-    window.open('http://#{host}/#{new_bookmark_path}' +
+    window.open('http://#{host}#{new_bookmark_path}' +
       '?title=' + encodeURI(document.title) + '&url=' + encodeURI(location.href));
   }
 )();
