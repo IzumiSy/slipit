@@ -1,14 +1,16 @@
-= form_for :session, url: session_path, html: { class: "ui large form" } do |form|
+- if notice
+  .ui.warning.message
+    .header
+      = simple_format notice, {}, wrapper_tag: 'div'
+
+= form_for :session, url: session_path, html: { class: "ui large form" } do |f|
   .ui.stacked.segment
     .ui.field
       .ui.left.icon.input
         %i.user.icon
-        = form.text_field :email, type: 'email', placeholder: "E-mail"
+        = f.text_field :email, type: 'email', placeholder: "E-mail"
     .ui.field
       .ui.left.icon.input
         %i.lock.icon
-        = form.password_field :password, placeholder: "Password"
-    .ui.fluid.large.teal.submit.button
-      Login
-  .ui.error.message
-    // TODO
+        = f.password_field :password, placeholder: "Password"
+    = f.submit "Login", class: "ui fluid large teal submit button"
