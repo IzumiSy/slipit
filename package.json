@@ -1,6 +1,6 @@
 {
   "private": true,
   "dependencies": {
-    "dotdotdot": "^1.7.0"
+    "clamp-js": "^0.7.0"
   }
 }
