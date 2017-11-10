@@ -13,7 +13,7 @@
   .content
     %i.right.floated.remove.icon{ data: { modal: bookmark.id } }
     %i.right.floated.edit.icon{ data: { link: edit_bookmark_path(bookmark.id) } }
-    .header
+    .header.ellipsis
       = image_tag favicon(bookmark.url), class: "favicon"
       = bookmark.title
     .meta

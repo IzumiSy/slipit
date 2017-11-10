@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'turbolinks:load', ->
-  $('.ellipsis').dotdotdot();
+  $('.ellipsis').clamp({ clamp: 3 });
 
   $('.ui.sidebar')
     .sidebar('setting', 'transition', 'overlay')
