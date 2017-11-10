@@ -1,5 +1,9 @@
 class AddClearanceToUsers < ActiveRecord::Migration[5.1]
   def self.up
+    create_table :users do |t|
+      t.timestamps null: false
+    end
+
     change_table :users do |t|
       t.string :encrypted_password, limit: 128
       t.string :confirmation_token, limit: 128
