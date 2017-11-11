@@ -8,7 +8,7 @@ class TagsController < ApplicationController
 
   def create
     tag = Tag.new(create_tag_permitted_params)
-    tag.user = currentUser
+    tag.user = current_user
 
     redirect_to tags_path, tag.save ?
       { notice: "Successfully added a new tag" } :
