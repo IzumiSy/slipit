@@ -17,6 +17,8 @@
   - @tags.each do |tag|
     .ui.tag.large.label
       = tag.name
+      .detail
+        = tag.bookmark_counts
 - else
   .ui.cube.shape.nobookmark-placeholder
     .sides
