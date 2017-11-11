@@ -1,0 +1,2 @@
+class BookmarkTag < ApplicationRecord
+end
