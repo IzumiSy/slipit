@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171111150901) do
+ActiveRecord::Schema.define(version: 20171111152100) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20171111150901) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.integer "user_id"
+    t.integer "bookmark_counts"
   end
 
   create_table "users", force: :cascade do |t|
