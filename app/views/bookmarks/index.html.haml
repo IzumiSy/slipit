@@ -1,7 +1,7 @@
 = render "shared/notice"
 %h2.ui.dividing.header.title
   Bookmarks
-  \#{link_to 'Add a bookmark', new_bookmark_path, { class: "positive ui right floated small button" }}
+  = link_to 'Add a bookmark', new_bookmark_path, { class: "positive ui right floated small button" }
 - if @bookmarks.present?
   .ui.four.stackable.cards.bookmark-list
     - @bookmarks.each do |bookmark|
