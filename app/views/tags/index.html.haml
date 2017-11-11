@@ -7,6 +7,7 @@
         = f.text_field :name, required: true, placeholder: "Put a name of a new tag"
       = f.submit class: "ui fluid button positive", style: "margin-top: 10px;"
 
+= render "shared/alert"
 = render "shared/notice"
 %h2.ui.dividing.header.title
   Tags
