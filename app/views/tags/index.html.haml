@@ -1,4 +1,14 @@
+.ui.mini.modal#new-tag-modal
+  .header
+    Add a new tag
+  .content
+    = form_for @tag do |f|
+      .ui.fluid.input
+        = f.text_field :name, required: true, placeholder: "Put a name of a new tag"
+      = f.submit class: "ui fluid button positive", style: "margin-top: 10px;"
+
 = render "shared/notice"
 %h2.ui.dividing.header.title
   Tags
-
+  %button#add-tag.positive.ui.right.floated.small.button
+    Add a tag
