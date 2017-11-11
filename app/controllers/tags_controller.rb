@@ -2,6 +2,7 @@ class TagsController < ApplicationController
   before_action :require_login
 
   def index
+    @tag = Tag.new
     # TODO
   end
 
