@@ -8,10 +8,15 @@ class Bookmark < ApplicationRecord
   end
 
   after_create do
-    self.tags.each { |tag| tag.increment!(:bookmark_counts) }
+    self.tags.each do |tag|
+      tag.increment!(:bookmark_counts)
+    end
   end
 
   before_destroy do
-    self.tags.each { |tag| tag.decrement!(:bookmark_counts) }
+    self.tags.each do |tag|
+      return unless tag.bookmark_counts
+      tag.decrement!(:bookmark_counts)
+    end
   end
 end
