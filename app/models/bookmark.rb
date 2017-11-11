@@ -7,16 +7,11 @@ class Bookmark < ApplicationRecord
     validates :url, url: true
   end
 
-  after_create :increase_tag_counters
-  after_destroy :decrease_tag_counters
-
-  private
-
-  def increase_tag_counters
-    self.tags.each { |tag| tag.bookmark_counts += 1 }
+  after_create do
+    self.tags.each { |tag| tag.increment!(:bookmark_counts) }
   end
 
-  def decrease_tag_counters
-    self.tags.each { |tag| tag.bookmark_counts -= 1 }
+  before_destroy do
+    self.tags.each { |tag| tag.decrement!(:bookmark_counts) }
   end
 end
