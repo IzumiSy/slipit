@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   root 'bookmarks#index'
 
   resources :bookmarks
-  resources :tags, only: %i(create)
+  resources :tags, only: %i(index create)
 
   scope module: :static_pages do
     get 'bookmarklet'

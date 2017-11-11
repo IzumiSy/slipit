@@ -1,8 +1,12 @@
 class TagsController < ApplicationController
   before_action :require_login
 
-  def create
+  def index
+    # TODO
+  end
 
+  def create
+    # TODO
   end
 
   private

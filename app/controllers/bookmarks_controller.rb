@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
   before_action :require_login
 
   def index
-    @bookmarks = Bookmark.where(user: current_user)
+    @bookmarks = current_user.bookmarks
   end
 
   def new
