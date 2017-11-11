@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
   before_action :require_login
 
   def index
-    @bookmarks = current_user.bookmarks
+    @bookmarks = current_user.bookmarks.preload(:tags)
   end
 
   def new
