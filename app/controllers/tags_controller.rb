@@ -3,16 +3,18 @@ class TagsController < ApplicationController
 
   def index
     @tag = Tag.new
-    # TODO
   end
 
   def create
-    # TODO
+    tag = Tag.new(create_tag_permitted_params)
+    redirect_to tags_path, tag.save ?
+      { notice: "Successfully added a new tag" } :
+      { alert: "Failed to add a new tag" }
   end
 
   private
 
   def create_tag_permitted_params
-    params.require(:name)
+    params.require(:tag).permit(:name)
   end
 end
