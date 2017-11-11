@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20171111152100) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.integer "user_id"
-    t.integer "bookmark_counts"
+    t.integer "bookmark_counts", default: 0, null: false
   end
 
   create_table "users", force: :cascade do |t|
