@@ -13,3 +13,14 @@
   Tags
   %button#add-tag.positive.ui.right.floated.small.button
     Add a tag
+- if @tags.present?
+  - @tags.each do |tag|
+    .ui.tag.large.label
+      = tag.name
+- else
+  .ui.cube.shape.nobookmark-placeholder
+    .sides
+      .active.side
+        .content
+          .center
+            Looks like nothing here :(
