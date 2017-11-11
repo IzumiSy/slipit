@@ -3,10 +3,13 @@ class TagsController < ApplicationController
 
   def index
     @tag = Tag.new
+    @tags = current_user.tags
   end
 
   def create
     tag = Tag.new(create_tag_permitted_params)
+    tag.user = currentUser
+
     redirect_to tags_path, tag.save ?
       { notice: "Successfully added a new tag" } :
       { alert: "Failed to add a new tag" }
