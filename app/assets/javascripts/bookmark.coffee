@@ -6,6 +6,8 @@ $(document).on 'turbolinks:load', ->
   document.querySelectorAll('.ellipsis').forEach (q) =>
     $clamp(q, { clamp: 3 });
 
+  $('.ui.dropdown').dropdown()
+
   $('.ui.sidebar')
     .sidebar('setting', 'transition', 'overlay')
     .sidebar('attach events', '.toggle.button', 'toggle')
