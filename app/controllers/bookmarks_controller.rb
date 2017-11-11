@@ -6,7 +6,7 @@ class BookmarksController < ApplicationController
   end
 
   def new
-    @tags = current_user.tags
+    @tags = current_user.tags.order_by_name
     @bookmark = Bookmark.new(new_bookmark_permitted_params)
   end
 
@@ -22,7 +22,7 @@ class BookmarksController < ApplicationController
   end
 
   def edit
-    @tags = current_user.tags
+    @tags = current_user.tags.order_by_name
     @bookmark = Bookmark.find(params.require(:id))
   end
 

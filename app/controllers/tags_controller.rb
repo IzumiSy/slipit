@@ -3,7 +3,7 @@ class TagsController < ApplicationController
 
   def index
     @tag = Tag.new
-    @tags = current_user.tags
+    @tags = current_user.tags.order_by_bookmark_counts
   end
 
   def create
