@@ -11,8 +11,8 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    @bookmark = Bookmark.new(bookmark_permitted_params)
-    @bookmark.user = current_user
+    @bookmark =
+      Bookmark.new(bookmark_permitted_params.merge({ user: current_user }))
 
     if @bookmark.save
       redirect_to bookmarks_path, notice: "New bookmark added"
