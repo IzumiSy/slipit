@@ -13,4 +13,12 @@ body > .ui.login {
       background: none;
     }
   }
+
+  .content {
+    text-align: left;
+
+    > h5 {
+      margin-top: 8px;
+    }
+  }
 }
