@@ -1,12 +1,12 @@
 class BookmarksController < ApplicationController
   before_action :require_login
+  before_action :prepare_current_user_tags, only: %i(new create edit update)
 
   def index
     @bookmarks = current_user.bookmarks.preload(:tags)
   end
 
   def new
-    @tags = current_user.tags.order_by_name
     @bookmark = Bookmark.new(new_bookmark_permitted_params)
   end
 
@@ -22,7 +22,6 @@ class BookmarksController < ApplicationController
   end
 
   def edit
-    @tags = current_user.tags.order_by_name
     @bookmark = Bookmark.find(params.require(:id))
   end
 
@@ -43,6 +42,10 @@ class BookmarksController < ApplicationController
   end
 
   private
+
+  def prepare_current_user_tags
+    @tags = current_user.tags.order_by_name
+  end
 
   def bookmark_permitted_params
     params.require(:bookmark).permit(:title, :url, :description, tag_ids: [])
