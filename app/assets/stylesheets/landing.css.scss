@@ -1,0 +1,61 @@
+.landing {
+  .masthead.segment {
+    min-height: 650px;
+    padding: 1em 0;
+  }
+
+  h1.ui.inverted.header {
+    margin-top: 2em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: normal;
+  }
+
+  .ui.vertical.stripe {
+    padding: 4em 0;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    .ui.container {
+      padding: 4em 0;
+    }
+
+    .ui.container.logo {
+      background: #205546;
+      text-align: center;
+      max-width: 100% !important;
+      margin: 0 !important;
+      width: 100%;
+
+      h2 {
+        color: white;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    h3 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1.4em;
+    }
+
+    i.quote {
+      color: grey;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+
+      li {
+        padding: 0.3em 0;
+        font-weight: normal;
+        font-size: 0.7em;
+      }
+    }
+  }
+}

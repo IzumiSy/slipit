@@ -14,13 +14,20 @@ Rails.application.routes.draw do
     delete "/sign_out", to: "sessions#destroy", as: "sign_out"
   end
 
-  root 'bookmarks#index'
+  constraints Clearance::Constraints::SignedOut.new do
+    root to: 'static_pages#landing'
+  end
+
+  constraints Clearance::Constraints::SignedIn.new do
+    root to: 'bookmarks#index'
+  end
 
   resources :bookmarks
   resources :tags, only: %i(index create)
 
   scope module: :static_pages do
     get 'bookmarklet'
+    get 'landing'
   end
 
   # Example resource route with sub-resources:

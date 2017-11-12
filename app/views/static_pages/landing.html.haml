@@ -1,0 +1,53 @@
+.ui.top.fied.menu.transition.hidden
+
+.pusher
+  .ui.inverted.vertical.masthead.center.aligned.segment
+    .ui.container
+      .ui.large.secondary.inverted.pointing.menu
+        = link_to root_path, class: "header item" do
+          %img.logo{src: asset_path("logo_small.png") }/
+          Slip.it
+        .right.item.small
+          = link_to "Log in", sign_in_path, class: "ui inverted button"
+    .ui.text.container
+      %h1.ui.inverted.header
+        Slip.it
+      %h2
+        Your online bookmarks never be social.
+      = link_to sign_in_path, class: "ui huge teal button" do
+        Get Started
+  .ui.vertical.stripe.segment
+    .ui.text.container
+      %h3.ui.header
+        Just for you. Never be social.
+      %p
+        %i.quote
+          "I don't want to get my own bookmarks always open to the internet."
+      %p
+        Sick and tired of the social network services out there?
+        We get you covered! Slip.it is the service for guys like you
+        which provides you 100% private, simple online bookmarking service.
+    .ui.text.container
+      %h3.ui.header
+        Features
+        %ul
+          %li
+            %i.green.check.icon
+            100% private, no social feature
+          %li
+            %i.green.check.icon
+            Bookmarklet, tagging feature
+          %li
+            %i.green.check.icon
+            Simple and easy
+    .ui.text.container.logo
+      %img{ src: asset_path("logo_background.png") }/
+      %h2
+        Your online bookmarks never be social.
+      = link_to sign_in_path, class: "ui large teal button" do
+        Get Started
+  .ui.inverted.vertical.footer.segment
+    .ui.container.center.center.aligned
+      © 2017 IzumiSy.
+
+
