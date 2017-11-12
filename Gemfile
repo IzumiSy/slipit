@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 
 gem 'rails', '5.1.4'
+gem 'puma'
+gem 'resque'
+
 gem 'clearance'
 
 gem 'uglifier', '>= 1.3.0'
@@ -16,8 +19,6 @@ gem 'coffee-rails', '~> 4.2.1'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'font-awesome-rails'
 gem 'meta-tags'
-
-gem 'puma'
 
 gem 'validate_url'
 
