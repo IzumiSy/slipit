@@ -8,7 +8,7 @@ module ApplicationHelper
         title: "Slip.it",
         type: "website",
         url: "http://slipit.in",
-        image: asset_path("logo_small.png")
+        image: image_url("logo_small.png")
       }
     }
   end
