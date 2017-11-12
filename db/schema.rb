@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171111152100) do
+ActiveRecord::Schema.define(version: 20171112074744) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20171111152100) do
     t.string "name"
     t.integer "user_id"
     t.integer "bookmark_counts", default: 0, null: false
+    t.index ["name", "bookmark_counts"], name: "index_tags_on_name_and_bookmark_counts"
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,8 +45,8 @@ ActiveRecord::Schema.define(version: 20171111152100) do
     t.string "encrypted_password", limit: 128
     t.string "confirmation_token", limit: 128
     t.string "remember_token", limit: 128
-    t.index ["email"], name: "index_users_on_email"
-    t.index ["remember_token"], name: "index_users_on_remember_token"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["remember_token"], name: "index_users_on_remember_token", unique: true
   end
 
 end
