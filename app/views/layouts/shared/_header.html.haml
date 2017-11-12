@@ -14,6 +14,7 @@
         .menu
           = link_to "Bookmarklet", bookmarklet_path, class: "item"
           .divider
+          = link_to "About", landing_path, class: "item"
           = link_to "Logout", sign_out_path, class: "item red", method: :delete
     - else
       .ui.header.right.item.small
