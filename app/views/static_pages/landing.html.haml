@@ -17,7 +17,7 @@
       = link_to sign_in_path, class: "ui huge teal button" do
         Get Started
   .ui.vertical.stripe.segment
-    .ui.text.container
+    .ui.text.container.preface
       %h3.ui.header
         Just for you. Never be social.
       %p
@@ -27,7 +27,7 @@
         Sick and tired of the social network services out there?
         We get you covered! Slip.it is the service for guys like you
         which provides you 100% private, simple online bookmarking service.
-    .ui.text.container
+    .ui.text.container.features
       %h3.ui.header
         Features
         %ul
@@ -40,6 +40,16 @@
           %li
             %i.green.check.icon
             Simple and easy
+    .ui.text.container.open-source
+      %h3.ui.header
+        Open-Source
+      %p
+        Slip.it is an open-source software being developed on Github. You can see all the sources of Slip.it
+        and even deploy it upon your own server or any other PaaS like Heroku.
+      = link_to "https://github.com/IzumiSy/slip.it" do
+        %h4
+          %i.icon.github
+          IzumiSy/slip.it
     .ui.text.container.logo
       %img{ src: asset_path("logo_background.png") }/
       %h2
