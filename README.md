@@ -6,7 +6,9 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-### Setup
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+
+## Setup
 ```sh
 $ bundle exec rake db:create
 $ bundle exec rake db:migrate
@@ -22,3 +24,6 @@ $ bundle exec rails s
 ```sh
 $ TERM_CHILD=1 QUEUES=* bundle exec rake environment resque:work
 ```
+
+## Contribution
+PRs accepted.
