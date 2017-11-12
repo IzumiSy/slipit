@@ -3,7 +3,12 @@ class BookmarkCounterJob < ApplicationJob
 
   def perform(tags)
     Tag.where(id: tags).each do |tag|
-      tag.update(bookmark_counts: tag.bookmarks.count)
+      bookmark_counts = tag.bookmark_counts
+      if bookmark_counts > 0
+        tag.update(bookmark_counts: bookmark_counts)
+      else
+        tag.delete
+      end
     end
   end
 end
