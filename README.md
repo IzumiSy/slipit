@@ -17,3 +17,8 @@ $ bundle exec rake db:migrate
 $ bundle exec rails dev:cache
 $ bundle exec rails s
 ```
+
+#### Worker
+```sh
+$ TERM_CHILD=1 QUEUES=* bundle exec rake environment resque:work
+```
