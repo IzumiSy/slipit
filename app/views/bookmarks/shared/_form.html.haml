@@ -11,7 +11,7 @@
   .field
     = f.label :tags
     = f.collection_select :tag_ids, @tags, :id, :name,
-      { include_hidden: false }, { multiple: true, class: "ui fluid dropdown" }
+      { include_hidden: true }, { multiple: true, class: "ui fluid dropdown" }
   .field
     = f.submit 'Submit', class: 'ui primary button'
     = link_to 'Cancel', bookmarks_path, { class: 'ui button' }
