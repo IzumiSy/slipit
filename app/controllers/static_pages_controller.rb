@@ -1,11 +1,11 @@
 class StaticPagesController < ApplicationController
-  before_action :require_login
-
   #
   # NOTE: Only this controller does not follow a RESTful resource rule
   #
 
   def bookmarklet
+    require_login
+
     host = Rails.env.development? ?
       "localhost:#{request.port}" : request.host
     @src = <<-SRC
@@ -17,5 +17,9 @@ javascript:(
 )();
       SRC
     @bookmarklet = @src.delete("\n").delete(" ")
+  end
+
+  def landing
+    render layout: "landing"
   end
 end
