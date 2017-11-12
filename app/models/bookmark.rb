@@ -10,4 +10,6 @@ class Bookmark < ApplicationRecord
   after_create Tags::BookmarkCounter.new
   after_update Tags::BookmarkCounter.new
   after_destroy Tags::BookmarkCounter.new
+
+  scope :order_by_created_at, -> { order("created_at DESC") }
 end

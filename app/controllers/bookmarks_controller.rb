@@ -3,7 +3,8 @@ class BookmarksController < ApplicationController
   before_action :prepare_current_user_tags, only: %i(new create edit update)
 
   def index
-    @bookmarks = current_user.bookmarks.preload(:tags)
+    @bookmarks = current_user.bookmarks
+      .order_by_created_at.preload(:tags)
   end
 
   def new
