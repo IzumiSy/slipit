@@ -4,6 +4,6 @@ class Bookmark < ApplicationRecord
 
   with_options presence: true do
     validates :title
-    validates :url, url: true
+    validates :url, url: true, uniqueness: true
   end
 end
