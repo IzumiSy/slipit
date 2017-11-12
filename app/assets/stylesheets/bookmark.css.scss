@@ -35,7 +35,12 @@
   }
 
   .main.content {
-    height: 120px;
+    height: 145px;
+
+    > .description {
+      font-size: 12px;
+      color: grey;
+    }
   }
 
   .extra.content {

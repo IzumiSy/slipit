@@ -3,8 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'turbolinks:load', ->
-  document.querySelectorAll('.ellipsis').forEach (q) =>
+  document.querySelectorAll('.ellipsis').forEach (q) ->
     $clamp(q, { clamp: 3 });
+  document.querySelectorAll('.main.content > .description').forEach (q) ->
+    $clamp(q, { clamp: 2 });
 
   $('.ui.dropdown').dropdown()
 
