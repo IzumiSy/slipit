@@ -6,4 +6,8 @@ class Bookmark < ApplicationRecord
     validates :title
     validates :url, url: true, uniqueness: true
   end
+
+  after_create Tags::BookmarkCounter.new
+  after_update Tags::BookmarkCounter.new
+  after_destroy Tags::BookmarkCounter.new
 end
