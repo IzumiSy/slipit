@@ -58,7 +58,10 @@ Rails.application.configure do
   config.cache_store = :dalli_store,
     (ENV['MEMCACHEDCLOUD_SERVERS'] || "").split(','), {
       username: ENV['MEMCACHEDCLOUD_USERNAME'],
-      password: ENV['MEMCACHEDCLOUD_PASSWORD']
+      password: ENV['MEMCACHEDCLOUD_PASSWORD'],
+      expires_in: 1.day,
+      compress: true,
+      failover: true
     }
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
@@ -92,4 +95,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Soecifies session store
+  config.session_store ActionDispatch::Session::CacheStore, expires_after: 1.day
 end

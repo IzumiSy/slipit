@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Specifies session store
+  config.session_store :cookie_store, key: '_slip_it_session'
 end

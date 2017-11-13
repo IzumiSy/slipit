@@ -51,4 +51,7 @@ Rails.application.configure do
 
   # Allow to use web-console from Vagrant
   config.web_console.whitelisted_ips = '10.0.2.2'
+
+  # Specifies session store
+  config.session_store :cookie_store, key: '_slip_it_session'
 end
