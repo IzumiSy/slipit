@@ -73,6 +73,7 @@ GEM
     coolline (0.5.0)
       unicode_utils (~> 1.4)
     crass (1.0.2)
+    dalli (2.7.6)
     email_validator (1.6.0)
       activemodel
     erubi (1.7.0)
@@ -252,6 +253,7 @@ DEPENDENCIES
   better_errors
   clearance
   coffee-rails (~> 4.2.1)
+  dalli
   font-awesome-rails
   haml-rails (~> 1.0)
   hirb
