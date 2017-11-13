@@ -126,6 +126,7 @@ GEM
     mono_logger (1.1.0)
     multi_json (1.12.2)
     mustermann (1.0.1)
+    newrelic_rpm (4.5.0.337)
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
@@ -261,6 +262,7 @@ DEPENDENCIES
   jquery-rails
   listen
   meta-tags
+  newrelic_rpm
   pg
   pry-byebug
   pry-coolline

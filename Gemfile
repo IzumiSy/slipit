@@ -23,6 +23,8 @@ gem 'meta-tags'
 
 gem 'validate_url'
 
+gem 'newrelic_rpm'
+
 group :development, :test do
   gem 'sqlite3'
 
