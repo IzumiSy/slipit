@@ -23,3 +23,6 @@ $(document).on 'turbolinks:load', ->
     modalId = $(@).attr('data-modal')
     $("#remove-modal-#{modalId}").modal('show')
     e.preventDefault()
+
+  $('#add-tag').on 'click', (e) ->
+    $('#new-tag-modal').modal 'show'
