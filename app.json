@@ -10,7 +10,8 @@
   "repository": "https://github.com/IzumiSy/slip.it",
   "addons": [
     { "plan": "heroku-postgresql" },
-    { "plan": "heroku-redis" }
+    { "plan": "heroku-redis" },
+    { "plan": "memcachedcloud" }
   ],
   "buildpacks": [
     { "url": "heroku/node" },
