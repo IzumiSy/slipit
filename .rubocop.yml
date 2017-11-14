@@ -4,6 +4,8 @@ AllCops:
     - 'bin/**/*'
 Metrics/LineLength:
   Max: 100
+Metrics/MethodLength:
+  Max: 30
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/Documentation:
