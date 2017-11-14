@@ -32,6 +32,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-coolline'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'web-console'
   gem 'hirb'
 

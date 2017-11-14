@@ -54,6 +54,8 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindex (0.5.0)
+    binding_of_caller (0.7.3)
+      debug_inspector (>= 0.0.1)
     builder (3.2.3)
     byebug (9.1.0)
     clearance (1.16.1)
@@ -73,6 +75,7 @@ GEM
       unicode_utils (~> 1.4)
     crass (1.0.2)
     dalli (2.7.6)
+    debug_inspector (0.0.3)
     email_validator (1.6.0)
       activemodel
     erubi (1.7.0)
@@ -246,6 +249,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  binding_of_caller
   clearance
   coffee-rails (~> 4.2.1)
   dalli
