@@ -26,8 +26,8 @@ module SlipIt
     end
 
     # Disable field_with_errors
-    config.action_view.field_error_proc = proc do |html_tag, instance|
-      %(#{html_tag}).html_safe
+    config.action_view.field_error_proc = proc do |html_tag, _|
+      %(html_tag.to_s).html_safe
     end
   end
 end
