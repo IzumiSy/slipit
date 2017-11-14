@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   scope module: :clearance do
-    resources :passwords, only: %i(create new)
-    resources :users, only: %i() do
-      resource :password, controller: :passwords, only: %i(create edit update)
+    resources :passwords, only: %i[create new]
+    resources :users, only: %i[] do
+      resource :password, controller: :passwords, only: %i[create edit update]
     end
 
     get "/sign_in", to: "sessions#new", as: :sign_in
@@ -23,10 +23,10 @@ Rails.application.routes.draw do
   end
 
   resources :bookmarks
-  resources :tags, only: %i(index create show)
+  resources :tags, only: %i[index create show]
 
   namespace :bookmark do
-    resource :url, only: %i(create)
+    resource :url, only: %i[create]
   end
 
   scope module: :static_pages do
