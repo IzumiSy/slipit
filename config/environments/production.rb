@@ -52,11 +52,11 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   config.cache_store = :dalli_store,
-    (ENV['MEMCACHEDCLOUD_SERVERS'] || "").split(','), {
+    (ENV['MEMCACHEDCLOUD_SERVERS'] || '').split(','), {
       username: ENV['MEMCACHEDCLOUD_USERNAME'],
       password: ENV['MEMCACHEDCLOUD_PASSWORD'],
       expires_in: 1.day,
@@ -87,7 +87,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
