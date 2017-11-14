@@ -10,6 +10,8 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/Documentation:
   Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
 Style/ConditionalAssignment:
   EnforcedStyle: assign_inside_condition
 Layout/MultilineMethodCallIndentation:
