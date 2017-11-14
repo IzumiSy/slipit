@@ -20,14 +20,14 @@ module SlipIt
 
     # Settings for Clearance
     config.to_prepare do
-      Clearance::SessionsController.layout "login"
-      Clearance::UsersController.layout "login"
-      Clearance::PasswordsController.layout "login"
+      Clearance::SessionsController.layout 'login'
+      Clearance::UsersController.layout 'login'
+      Clearance::PasswordsController.layout 'login'
     end
 
     # Disable field_with_errors
-    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
-      %Q(#{html_tag}).html_safe
+    config.action_view.field_error_proc = proc do
+      %(html_tag.to_s).html_safe
     end
   end
 end

@@ -1,9 +1,17 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'bin/**/*'
 Metrics/LineLength:
   Max: 100
+Metrics/MethodLength:
+  Max: 30
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/Documentation:
   Enabled: false
+Style/ConditionalAssignment:
+  EnforcedStyle: assign_inside_condition
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
   IndentationWidth: 2

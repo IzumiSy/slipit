@@ -13,7 +13,7 @@ class Bookmark < ApplicationRecord
   after_update Tags::BookmarkCounter.new
   after_destroy Tags::BookmarkCounter.new
 
-  scope :order_by_created_at, -> { order("created_at DESC") }
+  scope :order_by_created_at, -> { order('created_at DESC') }
 
   search_scope :search do
     attributes all: %i[title url description]

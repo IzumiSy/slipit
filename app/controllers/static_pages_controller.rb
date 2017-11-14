@@ -8,20 +8,24 @@ class StaticPagesController < ApplicationController
   def bookmarklet
     require_login
 
-    host = Rails.env.development? ?
-      "localhost:#{request.port}" : request.host
+    if Rails.env.development?
+      host = "localhost:#{request.port}"
+    else
+      host = request.host
+    end
+
     @src = <<-SRC
-javascript:(
-  function() {
-    window.open('http://#{host}#{new_bookmark_path}' +
-      '?title=' + encodeURI(document.title) + '&url=' + encodeURI(location.href));
-  }
-)();
+  javascript:(
+    function() {
+      window.open('http://#{host}#{new_bookmark_path}' +
+        '?title=' + encodeURI(document.title) + '&url=' + encodeURI(location.href));
+    }
+  )();
       SRC
-    @bookmarklet = @src.delete("\n").delete(" ")
+    @bookmarklet = @src.delete("\n").delete(' ')
   end
 
   def landing
-    render layout: "landing"
+    render layout: 'landing'
   end
 end

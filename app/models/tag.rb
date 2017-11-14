@@ -8,5 +8,5 @@ class Tag < ApplicationRecord
   end
 
   scope :order_by_name, -> { order(:name) }
-  scope :order_by_bookmark_counts, -> { order("bookmark_counts DESC") }
+  scope :order_by_bookmark_counts, -> { order('bookmark_counts DESC') }
 end
