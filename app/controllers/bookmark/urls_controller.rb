@@ -1,4 +1,6 @@
 class Bookmark::UrlsController < ApplicationController
+  before_action :require_login
+
   def create
     new_bookmark =
       NewBookmarkForm.new(permitted_params)
