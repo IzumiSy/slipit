@@ -31,14 +31,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-coolline'
-
-  gem 'awesome_print'
   gem 'better_errors'
-
   gem 'web-console'
-
   gem 'hirb'
-  gem 'hirb-unicode'
 
   gem 'spring'
   gem 'listen'
