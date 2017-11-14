@@ -76,6 +76,8 @@ GEM
     crass (1.0.2)
     dalli (2.7.6)
     debug_inspector (0.0.3)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     email_validator (1.6.0)
       activemodel
     erubi (1.7.0)
@@ -101,6 +103,8 @@ GEM
       haml (>= 4.0, < 6)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     jquery-rails (4.3.1)
@@ -116,19 +120,34 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    mechanize (2.7.5)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (>= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.6)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     meta-tags (2.6.0)
       actionpack (>= 3.2.0, < 5.3)
     method_source (0.9.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mini_mime (0.1.4)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     mono_logger (1.1.0)
     multi_json (1.12.2)
     mustermann (1.0.1)
+    net-http-digest_auth (1.4.1)
+    net-http-persistent (2.9.4)
     newrelic_rpm (4.5.0.337)
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    ntlm-http (0.1.1)
     pg (0.21.0)
     pry (0.11.2)
       coderay (~> 1.1.0)
@@ -229,6 +248,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
     unicode_utils (1.4.0)
     validate_url (1.0.2)
       activemodel (>= 3.0.0)
@@ -240,6 +262,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webrobots (0.1.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -258,6 +281,7 @@ DEPENDENCIES
   hirb
   jquery-rails
   listen
+  mechanize
   meta-tags
   newrelic_rpm
   pg
