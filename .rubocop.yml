@@ -1,5 +1,7 @@
 Metrics/LineLength:
   Max: 100
+Style/FrozenStringLiteralComment:
+  Enabled: false
 Style/Documentation:
   Enabled: false
 Layout/MultilineMethodCallIndentation:

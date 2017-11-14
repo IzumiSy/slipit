@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class BookmarkSearchForm < ApplicationForm
   attr_accessor :query, :user
 
