@@ -1,3 +1,3 @@
 class ApplicationForm
-  include ApplicationModel::Model
+  include ActiveModel::Model
 end
