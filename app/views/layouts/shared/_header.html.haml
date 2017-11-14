@@ -10,14 +10,19 @@
         Bookmarks
       = link_to tags_path, class: "item" do
         Tags
-      .ui.simple.dropdown.item.right.floated
-        Preference
-        %i.dropdown.icon
-        .menu
-          = link_to "Bookmarklet", bookmarklet_path, class: "item"
-          .divider
-          = link_to "About", landing_path, class: "item"
-          = link_to "Logout", sign_out_path, class: "item red", method: :delete
+      .right.menu
+        .item
+          .ui.transparent.inverted.icon.input
+            %i.search.icon
+            %input
+        .ui.simple.dropdown.item
+          Preference
+          %i.dropdown.icon
+          .menu
+            = link_to "Bookmarklet", bookmarklet_path, class: "item"
+            .divider
+            = link_to "About", landing_path, class: "item"
+            = link_to "Logout", sign_out_path, class: "item red", method: :delete
     - else
       .ui.header.right.item.small
         = link_to "Log in", sign_in_path, class: "ui inverted button"
