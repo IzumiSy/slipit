@@ -1,4 +1,6 @@
 class Bookmark < ApplicationRecord
+  include SearchCop
+
   belongs_to :user
   has_and_belongs_to_many :tags
 
@@ -12,4 +14,8 @@ class Bookmark < ApplicationRecord
   after_destroy Tags::BookmarkCounter.new
 
   scope :order_by_created_at, -> { order("created_at DESC") }
+
+  search_scope :search do
+    attributes all: [:title, :url, :description]
+  end
 end
