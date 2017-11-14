@@ -1,6 +1,10 @@
 class TagsController < ApplicationController
   before_action :require_login
 
+  def show
+    # TODO
+  end
+
   def index
     @tag = Tag.new
     @tags = current_user.tags.order_by_bookmark_counts

@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   end
 
   resources :bookmarks
-  resources :tags, only: %i(index create)
+  resources :tags, only: %i(index create show)
 
   namespace :bookmark do
     resource :url, only: %i(create)
@@ -33,32 +33,4 @@ Rails.application.routes.draw do
     get 'bookmarklet'
     get 'landing'
   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end
