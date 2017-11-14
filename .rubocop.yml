@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - 'db/**/*'
+    - 'bin/**/*'
 Metrics/LineLength:
   Max: 100
 Style/FrozenStringLiteralComment:
