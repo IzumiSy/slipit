@@ -8,8 +8,12 @@ class StaticPagesController < ApplicationController
   def bookmarklet
     require_login
 
-    host = Rails.env.development? ?
-      "localhost:#{request.port}" : request.host
+    if Rails.env.development?
+      host = "localhost:#{request.port}"
+    else
+      host = request.host
+    end
+
     @src = <<-SRC
   javascript:(
     function() {
