@@ -22,10 +22,10 @@ class StaticPagesController < ApplicationController
     }
   )();
       SRC
-    @bookmarklet = @src.delete("\n").delete(" ")
+    @bookmarklet = @src.delete("\n").delete(' ')
   end
 
   def landing
-    render layout: "landing"
+    render layout: 'landing'
   end
 end

@@ -18,9 +18,9 @@ class TagsController < ApplicationController
     tag.user = current_user
 
     if tag.save
-      redirect_to tags_path, notice: "Successfully added a new tag"
+      redirect_to tags_path, notice: 'Successfully added a new tag'
     else
-      redirect_to tags_path, alert: "Failed to add a new tag"
+      redirect_to tags_path, alert: 'Failed to add a new tag'
     end
   end
 

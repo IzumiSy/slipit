@@ -18,7 +18,7 @@ class BookmarksController < ApplicationController
       Bookmark.new(create_bookmark_permitted_params.merge(user: current_user))
 
     if @bookmark.save
-      redirect_to bookmarks_path, notice: "New bookmark added"
+      redirect_to bookmarks_path, notice: 'New bookmark added'
     else
       render :new
     end
@@ -32,7 +32,7 @@ class BookmarksController < ApplicationController
     bookmark = Bookmark.find(params.require(:id))
 
     if bookmark.update(create_bookmark_permitted_params)
-      redirect_to bookmarks_path, notice: "Bookmark updated"
+      redirect_to bookmarks_path, notice: 'Bookmark updated'
     else
       render :edit
     end
@@ -41,7 +41,7 @@ class BookmarksController < ApplicationController
   def destroy
     bookmark = Bookmark.find(params.require(:id))
     bookmark.destroy
-    redirect_to bookmarks_path, notice: "Bookmark removed"
+    redirect_to bookmarks_path, notice: 'Bookmark removed'
   end
 
   private
