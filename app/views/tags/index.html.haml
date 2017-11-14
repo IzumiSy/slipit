@@ -15,10 +15,11 @@
     Add a tag
 - if @tags.present?
   - @tags.each do |tag|
-    .ui.tag.large.label
-      = tag.name
-      .detail
-        = tag.bookmark_counts
+    = link_to tag_path(tag.id) do
+      .ui.tag.large.label
+        = tag.name
+        .detail
+          = tag.bookmark_counts
 - else
   .ui.cube.shape.nobookmark-placeholder
     .sides
