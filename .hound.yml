@@ -1,2 +1,4 @@
 ruby:
   config_file: .rubocop.yml
+haml:
+  enabled: false
