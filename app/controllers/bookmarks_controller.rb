@@ -4,9 +4,9 @@ class BookmarksController < ApplicationController
 
   def index
     @new_bookmark = NewBookmarkForm.new
-    @bookmarks = BookmarkSearchForm.new(current_user)
-      .call(bookmark_search_permitted_params)
-      .order_by_created_at.preload(:tags)
+    @search_bookmark = BookmarkSearchForm.new(bookmark_search_permitted_params)
+    @search_bookmark.user = current_user
+    @bookmarks = @search_bookmark.call().order_by_created_at.preload(:tags)
   end
 
   def new
@@ -59,6 +59,6 @@ class BookmarksController < ApplicationController
   end
 
   def bookmark_search_permitted_params
-    params.permit(:query)
+    params[:bookmark_search_form]&.permit(:query)
   end
 end
