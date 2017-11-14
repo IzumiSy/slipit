@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   resources :bookmarks
   resources :tags, only: %i[index create show]
 
-  namespace :bookmark do
+  namespace :bookmarks do
     resource :url, only: %i[create]
   end
 

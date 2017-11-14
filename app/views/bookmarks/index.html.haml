@@ -2,7 +2,7 @@
   .header
     Enter an URL
   .content
-    = form_for @new_bookmark, url: bookmark_url_path do |f|
+    = form_for @new_bookmark, url: bookmarks_url_path do |f|
       .ui.fluid.input
         = f.text_field :url, required: true, placeholder: "Put an URL of the website"
       = f.submit class: "ui fluid button positive", style: "margin-top: 10px;"
