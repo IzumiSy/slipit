@@ -5,10 +5,10 @@ class BookmarkSearchForm < ApplicationForm
 
   validates :user, presence: true
 
-  def call(query)
+  def call
     validate!
-    Bookmark.search(query)
+    @user.bookmarks.search(@query)
   rescue ActiveModel::ValidationError
-    []
+    @user.bookmarks
   end
 end
