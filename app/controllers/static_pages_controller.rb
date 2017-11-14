@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  include BookmarkSearch
+
   #
   # NOTE: Only this controller does not follow a RESTful resource rule
   #

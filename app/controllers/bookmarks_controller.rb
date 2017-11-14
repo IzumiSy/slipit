@@ -1,12 +1,12 @@
 class BookmarksController < ApplicationController
+  include BookmarkSearch
+
   before_action :require_login
   before_action :prepare_current_user_tags, only: %i(new create edit update)
 
   def index
     @new_bookmark = NewBookmarkForm.new
-    @search_bookmark = BookmarkSearchForm.new(bookmark_search_permitted_params)
-    @search_bookmark.user = current_user
-    @bookmarks = @search_bookmark.call.order_by_created_at.preload(:tags)
+    @bookmarks = @bookmark_search.call.order_by_created_at.preload(:tags)
   end
 
   def new
@@ -56,9 +56,5 @@ class BookmarksController < ApplicationController
 
   def new_bookmark_permitted_params
     params.permit(:title, :url)
-  end
-
-  def bookmark_search_permitted_params
-    params[:bookmark_search_form]&.permit(:query)
   end
 end
