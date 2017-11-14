@@ -9,6 +9,7 @@ gem 'dalli'
 
 gem 'clearance'
 gem 'mechanize'
+gem 'search_cop'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks'

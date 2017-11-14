@@ -1,11 +1,12 @@
 class BookmarksController < ApplicationController
+  include BookmarkSearch
+
   before_action :require_login
   before_action :prepare_current_user_tags, only: %i(new create edit update)
 
   def index
-    @bookmarks = current_user.bookmarks
-      .order_by_created_at.preload(:tags)
     @new_bookmark = NewBookmarkForm.new
+    @bookmarks = @bookmark_search.call.order_by_created_at.preload(:tags)
   end
 
   def new
@@ -14,7 +15,7 @@ class BookmarksController < ApplicationController
 
   def create
     @bookmark =
-      Bookmark.new(bookmark_permitted_params.merge({ user: current_user }))
+      Bookmark.new(create_bookmark_permitted_params.merge(user: current_user))
 
     if @bookmark.save
       redirect_to bookmarks_path, notice: "New bookmark added"
@@ -30,7 +31,7 @@ class BookmarksController < ApplicationController
   def update
     bookmark = Bookmark.find(params.require(:id))
 
-    if bookmark.update(bookmark_permitted_params)
+    if bookmark.update(create_bookmark_permitted_params)
       redirect_to bookmarks_path, notice: "Bookmark updated"
     else
       render :edit
@@ -49,7 +50,7 @@ class BookmarksController < ApplicationController
     @tags = current_user.tags.order_by_name
   end
 
-  def bookmark_permitted_params
+  def create_bookmark_permitted_params
     params.require(:bookmark).permit(:title, :url, :description, tag_ids: [])
   end
 

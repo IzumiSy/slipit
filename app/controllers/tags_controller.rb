@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  include BookmarkSearch
+
   before_action :require_login
 
   def show
