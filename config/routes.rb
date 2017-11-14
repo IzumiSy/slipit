@@ -5,13 +5,13 @@ Rails.application.routes.draw do
       resource :password, controller: :passwords, only: %i[create edit update]
     end
 
-    get "/sign_in", to: "sessions#new", as: :sign_in
-    post "/sign_in", to: "sessions#create", as: :session
+    get '/sign_in', to: 'sessions#new', as: :sign_in
+    post '/sign_in', to: 'sessions#create', as: :session
 
-    get "/sign_up", to: "users#new", as: "sign_up"
-    post "/sign_up", to: "users#create", as: :users
+    get '/sign_up', to: 'users#new', as: :sign_up
+    post '/sign_up', to: 'users#create', as: :users
 
-    delete "/sign_out", to: "sessions#destroy", as: "sign_out"
+    delete '/sign_out', to: 'sessions#destroy', as: :sign_out
   end
 
   constraints Clearance::Constraints::SignedOut.new do
