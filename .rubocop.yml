@@ -2,3 +2,5 @@ Metrics/LineLength:
   Enabled: 100
 Style/Documentation:
   Enabled: false
+AlignParameters:
+  EnforcedStyle: with_fixed_parameter
