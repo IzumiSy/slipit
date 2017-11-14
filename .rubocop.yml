@@ -3,4 +3,4 @@ Metrics/LineLength:
 Style/Documentation:
   Enabled: false
 AlignParameters:
-  EnforcedStyle: with_fixed_parameter
+  EnforcedStyle: with_fixed_indentation
