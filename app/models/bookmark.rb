@@ -15,7 +15,7 @@ class Bookmark < ApplicationRecord
 
   scope :order_by_created_at, -> { order("created_at DESC") }
 
-  search_scope :title_search { attributes :title }
-  search_scope :url_search { attributes :url }
-  search_scope :description_search { attributes :description }
+  search_scope :search do
+    attributes :title, :url, :description
+  end
 end
