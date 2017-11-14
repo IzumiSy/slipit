@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 class BookmarkSearchForm < ApplicationForm
-  attr_accessor :query
+  attr_accessor :query, :user
 
-  validates :query, presence: true
+  validates :user, presence: true
 
-  def call
+  def call(query)
     validate!
-    Bookmark.search(@query)
+    Bookmark.search(query)
   rescue ActiveModel::ValidationError
     []
   end
