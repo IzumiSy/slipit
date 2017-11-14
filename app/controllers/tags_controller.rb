@@ -17,9 +17,11 @@ class TagsController < ApplicationController
     tag = Tag.new(create_tag_permitted_params)
     tag.user = current_user
 
-    redirect_to tags_path, tag.save ?
-      { notice: "Successfully added a new tag" } :
-      { alert: "Failed to add a new tag" }
+    if tag.save
+      redirect_to tags_path, notice: "Successfully added a new tag"
+    else
+      redirect_to tags_path, alert: "Failed to add a new tag"
+    end
   end
 
   private
