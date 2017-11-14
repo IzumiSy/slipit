@@ -6,7 +6,7 @@ class BookmarksController < ApplicationController
     @new_bookmark = NewBookmarkForm.new
     @search_bookmark = BookmarkSearchForm.new(bookmark_search_permitted_params)
     @search_bookmark.user = current_user
-    @bookmarks = @search_bookmark.call().order_by_created_at.preload(:tags)
+    @bookmarks = @search_bookmark.call.order_by_created_at.preload(:tags)
   end
 
   def new
