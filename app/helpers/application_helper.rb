@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def meta_tag_configs
+  def metatag_configs
     {
       title: "Slip.it",
       description: "Your online bookmarks never be social.",
