@@ -25,6 +25,10 @@ Rails.application.routes.draw do
   resources :bookmarks
   resources :tags, only: %i(index create)
 
+  namespace :bookmark do
+    resource :url, only: %i(create)
+  end
+
   scope module: :static_pages do
     get 'bookmarklet'
     get 'landing'

@@ -26,3 +26,5 @@ $(document).on 'turbolinks:load', ->
 
   $('#add-tag').on 'click', (e) ->
     $('#new-tag-modal').modal 'show'
+  $('#add-bookmark').on 'click', (e) ->
+    $('#new-bookmark-modal').modal 'show'

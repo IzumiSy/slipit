@@ -5,6 +5,7 @@ class BookmarksController < ApplicationController
   def index
     @bookmarks = current_user.bookmarks
       .order_by_created_at.preload(:tags)
+    @new_bookmark = NewBookmarkForm.new
   end
 
   def new
