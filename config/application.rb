@@ -20,9 +20,9 @@ module SlipIt
 
     # Settings for Clearance
     config.to_prepare do
-      Clearance::SessionsController.layout "login"
-      Clearance::UsersController.layout "login"
-      Clearance::PasswordsController.layout "login"
+      Clearance::SessionsController.layout 'login'
+      Clearance::UsersController.layout 'login'
+      Clearance::PasswordsController.layout 'login'
     end
 
     # Disable field_with_errors
