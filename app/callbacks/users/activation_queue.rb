@@ -1,5 +1,5 @@
 class Users::ActivationQueue
   def after_create(user)
-    Users::ActivationMailerJob.perform(user.id)
+    Users::ActivationMailerJob.perform_later(user.id)
   end
 end
