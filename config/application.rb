@@ -29,5 +29,8 @@ module SlipIt
     config.action_view.field_error_proc = proc do
       %(html_tag.to_s).html_safe
     end
+
+    # Add lib/guards
+    config.autoload_paths << Rails.root.join("lib/guards")
   end
 end
