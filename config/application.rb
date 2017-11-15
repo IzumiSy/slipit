@@ -31,6 +31,6 @@ module SlipIt
     end
 
     # Add lib/guards
-    config.autoload_paths << Rails.root.join("lib/guards")
+    config.autoload_paths << Rails.root.join('lib/guards')
   end
 end
