@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   get '/sign_up', to: 'users#new', as: :sign_up
   post '/sign_up', to: 'users#create', as: :users
 
-  resources :users, only: %[] do
+  resources :users, only: %i[] do
     scope module: :users do
-      resources :activations, only: %[show], param: :token
+      resources :activations, only: %i[show], param: :token
     end
   end
 
