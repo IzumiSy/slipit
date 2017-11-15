@@ -1,2 +1,2 @@
-class Users::PasswordResetsController < PasswordsController
+class Users::PasswordResetsController < Clearance::PasswordsController
 end

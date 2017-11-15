@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[] do
     scope module: :users do
-      resource :password, only: %i[create edit update]
+      resource :password_reset, only: %i[create edit update]
     end
   end
 
