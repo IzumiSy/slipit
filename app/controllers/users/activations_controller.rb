@@ -1,6 +1,6 @@
 class Users::ActivationsController < ApplicationController
   def show
-    user = User.find_by(activation_token: params.require(:token))
+    user = User.find_by!(activation_token: params.require(:token))
 
     unless user.activated_at
       user.activated_at = Time.now
@@ -11,7 +11,7 @@ class Users::ActivationsController < ApplicationController
     end
 
     redirect_to sign_in_path, notice: 'Your account has already activated'
-  rescue
-    redirect_to sign_up_path, notice: 'Invalid activation token'
+  rescue ActiveRecord::RecordNotFound => _e
+    redirect_to sign_in_path
   end
 end
