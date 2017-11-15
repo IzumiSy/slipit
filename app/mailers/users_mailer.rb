@@ -1,5 +1,8 @@
 class UsersMailer < ApplicationMailer
   def activation(user)
-    # TODO
+    @user = user
+    mail(to: @user.email, subject: 'Email confirmation for Slip.it') do |html|
+      format.html
+    end
   end
 end
