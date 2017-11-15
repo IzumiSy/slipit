@@ -1,5 +1,5 @@
 class UsersMailer < ApplicationMailer
-  def activation
+  def activation(user)
     # TODO
   end
 end
