@@ -4,7 +4,7 @@ class Users::ActivationMailerJob < ApplicationJob
   def perform
     user = User.find(user_id)
     user.activation_token = Clearance::Token.new
-    user.update
-    # UsersMailer.activation(user).deliver
+    user.save
+    UsersMailer.activation(user).deliver
   end
 end
