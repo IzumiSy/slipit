@@ -3,4 +3,6 @@ class User < ApplicationRecord
 
   has_many :bookmarks, dependent: :destroy
   has_many :tags, dependent: :destroy
+
+  after_create Users::ActivationQueue.new
 end

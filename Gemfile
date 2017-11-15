@@ -30,6 +30,9 @@ gem 'newrelic_rpm'
 group :development, :test do
   gem 'sqlite3'
 
+  gem 'letter_opener'
+  gem 'letter_opener_web'
+
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'hirb'
