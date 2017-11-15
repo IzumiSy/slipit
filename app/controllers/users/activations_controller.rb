@@ -11,7 +11,7 @@ class Users::ActivationsController < ApplicationController
     end
 
     redirect_to sign_in_path, notice: 'Your account has already activated'
-  rescue => _e
+  rescue
     redirect_to sign_up_path
   end
 end
