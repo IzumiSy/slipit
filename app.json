@@ -11,7 +11,8 @@
   "addons": [
     { "plan": "heroku-postgresql" },
     { "plan": "heroku-redis" },
-    { "plan": "memcachedcloud" }
+    { "plan": "memcachedcloud" },
+    { "plan": "sendgrid" }
   ],
   "buildpacks": [
     { "url": "heroku/node" },
