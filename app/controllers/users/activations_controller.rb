@@ -12,6 +12,6 @@ class Users::ActivationsController < ApplicationController
 
     redirect_to sign_in_path, notice: 'Your account has already activated'
   rescue
-    redirect_to sign_up_path
+    redirect_to sign_up_path, notice: 'Invalid activation token'
   end
 end
