@@ -9,9 +9,11 @@ class Bookmark < ApplicationRecord
     validates :url, url: true, uniqueness: true
   end
 
-  after_create Tags::BookmarkCounter.new
+  after_create Tags::BookmarkCounter.new,
+               Users::BookmarkCounter.new
+  after_destroy Tags::BookmarkCounter.new,
+                Users::BookmarkCounter.new
   after_update Tags::BookmarkCounter.new
-  after_destroy Tags::BookmarkCounter.new
 
   scope :order_by_created_at, -> { order('created_at DESC') }
 

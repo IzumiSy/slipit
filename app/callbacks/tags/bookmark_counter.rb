@@ -14,6 +14,6 @@ class Tags::BookmarkCounter
   private
 
   def perform_later(tags)
-    BookmarkCounterJob.perform_later(tags.pluck(:id))
+    Tags::BookmarkCounterJob.perform_later(tags.pluck(:id))
   end
 end

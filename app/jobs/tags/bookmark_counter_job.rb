@@ -1,4 +1,4 @@
-class BookmarkCounterJob < ApplicationJob
+class Tags::BookmarkCounterJob < ApplicationJob
   queue_as :default
 
   def perform(tags)

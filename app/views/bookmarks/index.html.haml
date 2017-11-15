@@ -10,7 +10,7 @@
 = render "shared/alert"
 = render "shared/notice"
 %h2.ui.dividing.header.title
-  = search_title || 'Bookmarks'
+  = search_title || "Bookmarks (#{current_user.bookmark_counts})"
   %button#add-bookmark.positive.ui.right.floated.small.button
     Add a new bookmark
 - if @bookmarks.present?
