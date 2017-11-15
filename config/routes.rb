@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/sign_up', to: 'users#create', as: :users
 
   scope module: :users do
-    resources :activations, only: %i[show], param: :token, path: :uses_activates
+    resources :activations, only: %i[show], param: :token, path: :user_activates
   end
 
   scope module: :clearance do
