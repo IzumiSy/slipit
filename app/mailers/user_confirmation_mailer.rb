@@ -1,2 +1,0 @@
-class UserConfirmationMailer < ApplicationMailer
-end
