@@ -1,4 +1,4 @@
-class Users::ActivationsController < ApplicationController
+class Users::ActivationController < ApplicationController
   def show
     user = User.find_by!(activation_token: params.require(:token))
 
