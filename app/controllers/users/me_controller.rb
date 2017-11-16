@@ -11,4 +11,7 @@ class Users::MeController < ApplicationController
 
   def update
   end
+
+  def destroy
+  end
 end
