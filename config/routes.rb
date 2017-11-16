@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   namespace :users do
     resource :activation, only: %i[show], param: :token, path: :activate
     resource :password_reset, only: %i[create new], path: :password_reset
+    resource :me, only: %i[show edit update]
   end
 
   resources :users, only: %i[] do
