@@ -25,11 +25,11 @@ class BookmarksController < ApplicationController
   end
 
   def edit
-    @bookmark = Bookmark.find(params.require(:id))
+    @bookmark = current_user.bookmarks.find(params.require(:id))
   end
 
   def update
-    bookmark = Bookmark.find(params.require(:id))
+    bookmark = current_user.bookmarks.find(params.require(:id))
 
     if bookmark.update(create_bookmark_permitted_params)
       redirect_to bookmarks_path, notice: 'Bookmark updated'
@@ -39,7 +39,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    bookmark = Bookmark.find(params.require(:id))
+    bookmark = current_user.bookmarks.find(params.require(:id))
     bookmark.destroy
     redirect_to bookmarks_path, notice: 'Bookmark removed'
   end
