@@ -1,3 +1,31 @@
+.ui.mini.modal#delete-bookmarks-modal
+  .header
+    Delete all bookmarks
+  .content
+    %p
+      Are you sure you will
+      %b delete all your bookmarks
+      ?
+  .actions
+    .ui.button.cancel
+      Cancel
+    .ui.button.red.ok
+      Proceed
+
+.ui.mini.modal#delete-account-modal
+  .header
+    Delete my account
+  .content
+    %p
+      Are you sure you will
+      %b delete your account
+      ?
+  .actions
+    .ui.button.cancel
+      Cancel
+    .ui.button.red.ok
+      Proceed
+
 .ui.two.column.centered.grid
   .column
     %h2.ui.dividing.header.title
@@ -26,8 +54,8 @@
       %i.icon.warning.sign
       Processes below can endanger your data
     %p
-      %button.ui.red.button
+      %button#delete-bookmarks.ui.red.button
         Delete all bookmarks
     %p
-      %button.ui.red.button
+      %button#delete-account.ui.red.button
         Delete my account
