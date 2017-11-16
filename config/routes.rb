@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   scope module: :clearance do
     resources :passwords, only: %i[create new]
-    resources :users, only: %i[] do
+    resources :users, only: %i[show edit update] do
       resource :password, controller: :passwords, only: %i[create edit update]
     end
 
