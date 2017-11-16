@@ -1,0 +1,13 @@
+.column
+  %h3
+    = t('.title')
+  %p
+    = t('.description')
+  = form_for :password_reset, html: { method: :put, class: 'ui large form' },
+        url: user_password_reset_path(@user, token: @user.confirmation_token) do |f|
+    .ui.stacked.segment
+      .ui.field
+        .ui.left.icon.input
+          %i.lock.icon
+          = f.password_field :password, type: :password, required: true
+      = f.submit 'Update', class: 'ui fluid large teal submit button'

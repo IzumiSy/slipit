@@ -1,0 +1,12 @@
+.column
+  %h3
+    = t('.title')
+  %p
+    = t('.description')
+  = form_for :password, url: users_password_reset_path, html: { class: 'ui large form' } do |f|
+    .ui.stacked.segment
+      .ui.field
+        .ui.left.icon.input
+          %i.user.icon
+          = f.text_field :email, type: :email, placeholder: "E-mail", required: true
+      = f.submit 'Send', class: 'ui fluid large teal submit button'
