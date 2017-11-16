@@ -4,7 +4,7 @@ class TagsController < ApplicationController
   before_action :require_login
 
   def show
-    @tag = Tag.find(params.require(:id))
+    @tag = current_user.tags.find(params.require(:id))
     @bookmarks = @tag.bookmarks.order_by_created_at
   end
 
