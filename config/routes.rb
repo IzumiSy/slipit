@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resource :password_reset, only: %i[create new], path: :password_reset
   end
 
-  resources :users, only: %i[show edit update] do
+  resources :users, only: %i[] do
     scope module: :users do
       resource :password_reset, only: %i[edit update]
     end
