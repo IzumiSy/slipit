@@ -1,6 +1,6 @@
 class UsersMailer < ApplicationMailer
   def activation(user)
     @user = user
-    mail(to: @user.email, subject: 'Email confirmation for Slip.it')
+    mail(to: @user.email, subject: 'Slip.it: Email confirmation')
   end
 end

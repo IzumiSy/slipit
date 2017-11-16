@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/sign_up', to: 'users#create', as: :users
 
   namespace :users do
-    resource :activation, only: %i[show], param: :token, path: :activate
+    resources :activation, only: %i[show], param: :token, path: :activate
     resource :password_reset, only: %i[create new], path: :password_reset
     resource :me, only: %i[show edit update]
   end

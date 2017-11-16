@@ -3,14 +3,12 @@ en:
   clearance:
     models:
       clearance_mailer:
-        change_password: Change your password
+        change_password: "Slip.it: Reset your password"
   clearance_mailer:
     change_password:
-      closing: If you didn't request this, ignore this email. Your password has
-        not been changed.
-      link_text: Change my password
+      link_text: "Reset my password"
       opening: "Someone, hopefully you, requested we send you a link to change
-        your password:"
+        your password."
   flashes:
     failure_after_create: Bad email or password.
     failure_after_update: Password can't be blank.
