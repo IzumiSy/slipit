@@ -1,0 +1,33 @@
+.ui.two.column.centered.grid
+  .column
+    %h2.ui.dividing.header.title
+      Profile
+      = link_to 'Edit', edit_users_me_path, class: "ui right floated small positive button"
+    %table.ui.basic.table
+      %tbody
+        %tr
+          %td
+            %b E-mail
+          %td
+            = current_user.email
+        %tr
+          %td
+            %b Bookmarks
+          %td
+            = current_user.bookmark_counts
+        %tr
+          %td
+            %b Tags
+          %td
+            = 0
+    %h3.ui.dividing.header
+      Danger Zone
+    %p
+      %i.icon.warning.sign
+      Processes below can endanger your data
+    %p
+      %button.ui.red.button
+        Delete all bookmarks
+    %p
+      %button.ui.red.button
+        Delete my account
