@@ -7,7 +7,7 @@ class Webpage
     @page
       .at('meta[property="og:description"],meta[name="description"]')
       &.attributes['content']&.value
-  rescue
+  rescue => _e
     ''
   end
 
