@@ -11,13 +11,15 @@
             %sup beta
         .right.item.small
           = link_to "Log in", sign_in_path, class: "ui inverted button"
-    .ui.text.container
-      %h1.ui.inverted.header
-        Slip.it
-      %h2
-        Your online bookmarks never be social.
+    .ui.text.container.head
+      %h2.ui.inverted.header
+        Your online bookmarks "never" be social.
+      %p
+        100% private, simple online bookmarking
+        service exactly for you
       = link_to sign_in_path, class: "ui huge teal button" do
         Get Started
+    = image_tag asset_path("background.png"), class: "background image"
   .ui.vertical.stripe.segment
     .ui.text.container.preface
       %h3.ui.header
@@ -34,14 +36,23 @@
         Features
         %ul
           %li
-            %i.green.check.icon
-            100% private, no social feature
+            %h2
+              %i.green.check.icon
+              100% private, no social feature.
+              .detail
+                Completely free from any social networking features. Only for you.
           %li
-            %i.green.check.icon
-            Bookmarklet, tagging feature
+            %h2
+              %i.green.check.icon
+              Bookmarklet, tagging feature.
+              .detail
+                Slip.it of course supports basic features for usability.
           %li
-            %i.green.check.icon
-            Simple and easy
+            %h2
+              %i.green.check.icon
+              Simple and easy.
+              .detail
+                Nothing complicated. No need to do the math.
     .ui.text.container.open-source
       %h3.ui.header
         Open-Source
@@ -51,7 +62,7 @@
       = link_to "https://github.com/IzumiSy/slipit" do
         %h4
           %i.icon.github
-          IzumiSy/slip.it
+          IzumiSy/slipit
     .ui.text.container.logo
       %img{ src: asset_path("logo_background.png") }/
       %h2
