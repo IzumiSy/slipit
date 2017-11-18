@@ -23,8 +23,8 @@
   .actions
     .ui.button.cancel
       Cancel
-    .ui.button.red.ok
-      Proceed
+    = link_to "Proceed", users_me_path,
+        class: "ui button red ok", method: :delete
 
 .ui.two.column.centered.grid
   .column
