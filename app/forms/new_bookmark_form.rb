@@ -20,7 +20,11 @@ class NewBookmarkForm < ApplicationForm
   def resolve!
     scraper = Mechanize.new
     scraper.get(@url)
-    @title = scraper.page.title
+    if defined?(scraper.page.title)
+      @title = scraper.page.title
+    else
+      @title = "(no title)"
+    end
   rescue Mechanize::ResponseCodeError => e
     @title = e.page.title
   end
