@@ -6,9 +6,7 @@ class Webpage
   def description
     @page
       .at('meta[property="og:description"],meta[name="description"]')
-      &.attributes['content']&.value
-  rescue => _e
-    ''
+      &.attributes&.dig('content')&.value
   end
 
   def title
