@@ -12,7 +12,7 @@ class NewBookmarkForm < ApplicationForm
   end
 
   def to_h
-    { title: @title, url: @url, description: @description}
+    { title: @title, url: @url, description: @description }
   end
 
   private
@@ -21,14 +21,14 @@ class NewBookmarkForm < ApplicationForm
     scraper = Mechanize.new
     scraper.get(@url)
 
-    @title =
-      if defined?(scraper.page.title)
-        scraper.page.title
-      else
-        '(no title)'
-      end
+    if defined?(scraper.page.title)
+      @title = scraper.page.title
+    else
+      @title = '(no title)'
+    end
+
     @description = scraper.page
-      .at('meta[property="og:description"]')&.attributes['content']&.value
+      .at('meta[property="og:description"]')&.attributes&.content&.value
   rescue Mechanize::ResponseCodeError => e
     @title = e.page.title
   end
