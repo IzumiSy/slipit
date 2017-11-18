@@ -11,6 +11,7 @@ class TagsController < ApplicationController
   def index
     @tag = Tag.new
     @tags = current_user.tags.order_by_bookmark_counts
+    @user = current_user
   end
 
   def create
