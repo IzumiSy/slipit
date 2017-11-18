@@ -4,10 +4,10 @@
     padding: 1em 0;
   }
 
-  h2.ui.inverted.header {
-    margin-top: 2.5em;
+  .ui.inverted.header {
     font-size: 2.5em;
     font-weight: normal;
+    margin-top: 2.5em;
   }
 
   .ui.text.container.head {
@@ -70,21 +70,19 @@
   }
 
   .background.image {
+    box-shadow: #808080 2px 2px 10px 0;
     margin-bottom: 30px;
     margin-top: 100px;
-    box-shadow: grey 2px 2px 10px 0px;
   }
 
-  .ui.container.features {
-    li {
-      margin-bottom: 15px;
+  .ui.container.features li {
+    margin-bottom: 15px;
+  }
 
-      .detail {
-        padding-left: 40px;
-        font-weight: normal;
-        color: grey;
-        font-size: 18px;
-      }
-    }
+  li .detail {
+    font-size: 18px;
+    font-weight: normal;
+    padding-left: 40px;
+    color: grey;
   }
 }
