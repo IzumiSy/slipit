@@ -20,15 +20,30 @@ class NewBookmarkForm < ApplicationForm
   def resolve!
     scraper = Mechanize.new
     scraper.get(@url)
-
-    @description = scraper.page
-      .at('meta[property="og:description"]')&.attributes['content']&.value
-    if defined?(scraper.page.title)
-      @title = scraper.page.title
-    else
-      @title = '(no title)'
-    end
+    webpage = Webpage.new(scraper.page)
+    @title = webpage.title
+    @description = webpage.description
   rescue Mechanize::ResponseCodeError => e
     @title = e.page.title
+  end
+
+  class Webpage
+    def initialize(page)
+      @page = page
+    end
+
+    def description
+      @page
+        .at('meta[property="og:description"]')
+        &.attributes.try('content')&.value
+    end
+
+    def title
+      if defined?(@page.title)
+        @page.title
+      else
+        '(no title)'
+      end
+    end
   end
 end
