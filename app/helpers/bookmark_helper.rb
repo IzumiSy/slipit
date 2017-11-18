@@ -1,6 +1,6 @@
 module BookmarkHelper
   def favicon(url)
-    "http://favicon.hatena.ne.jp/?url=#{url}"
+    "https://www.google.com/s2/favicons?domain=#{url}"
   end
 
   def search_title
