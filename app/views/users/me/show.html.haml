@@ -9,8 +9,8 @@
   .actions
     .ui.button.cancel
       Cancel
-    .ui.button.red.ok
-      Proceed
+    = link_to "Proceed", users_me_bookmarks_path,
+        class: "ui button red ok", method: :delete
 
 .ui.mini.modal#delete-account-modal
   .header
@@ -26,9 +26,9 @@
     .ui.button.red.ok
       Proceed
 
-= render "shared/notice"
 .ui.two.column.centered.grid
   .column
+    = render "shared/notice"
     %h2.ui.dividing.header.title
       Profile
       = link_to 'Edit', edit_users_me_path, class: "ui right floated small positive button"
