@@ -1,4 +1,4 @@
-= form_for @bookmark, html: { class: 'ui form' } do |f|
+= form_for @bookmark, html: { class: 'ui form bookmark-form' } do |f|
   .field.title
     = f.label :title
     = image_tag favicon(@bookmark.url), class: "favicon"
