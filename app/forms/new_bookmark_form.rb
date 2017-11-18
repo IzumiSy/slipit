@@ -20,7 +20,6 @@ class NewBookmarkForm < ApplicationForm
   def resolve!
     scraper = Mechanize.new
     scraper.get(@url)
-
     webpage = Webpage.new(scraper.page)
     @title = webpage.title
     @description = webpage.description
