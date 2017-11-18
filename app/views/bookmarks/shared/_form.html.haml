@@ -1,17 +1,18 @@
 = form_for @bookmark, html: { class: 'ui form' } do |f|
-  .field
+  .field.title
     = f.label :title
+    = image_tag favicon(@bookmark.url), class: "favicon"
     = f.text_field :title, required: true, autocomplete: 'off'
-  .field
+  .field.url
     = f.label :url
     = f.text_field :url, required: true, autocomplete: 'off', placeholder: "http://"
-  .field
+  .field.description
     = f.label :description
     = f.text_field :description, autocomplete: 'off'
-  .field
+  .field.tags
     = f.label :tags
     = f.collection_select :tag_ids, @tags, :id, :name,
       { include_hidden: true }, { multiple: true, class: "ui fluid dropdown" }
-  .field
+  .field.submit
     = f.submit 'Submit', class: 'ui primary button'
     = link_to 'Cancel', bookmarks_path, { class: 'ui button' }
