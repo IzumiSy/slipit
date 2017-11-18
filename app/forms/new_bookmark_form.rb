@@ -23,7 +23,7 @@ class NewBookmarkForm < ApplicationForm
     if defined?(scraper.page.title)
       @title = scraper.page.title
     else
-      @title = "(no title)"
+      @title = '(no title)'
     end
   rescue Mechanize::ResponseCodeError => e
     @title = e.page.title
