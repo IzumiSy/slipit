@@ -16,6 +16,6 @@ class Users::MeController < ApplicationController
     user = current_user
     sign_out
     user.delete
-    redirect_to sign_in_path, notice: "Your account has successfully deleted"
+    redirect_to sign_in_path, notice: 'Your account has successfully deleted'
   end
 end
