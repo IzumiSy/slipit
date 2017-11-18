@@ -61,3 +61,18 @@
   margin-bottom: 10px;
   margin-left: 20px;
 }
+
+form#new_bookmark {
+  .field.title {
+    .favicon {
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      margin: 10px;
+    }
+
+    #bookmark_title {
+      padding-left: 35px;
+    }
+  }
+}
