@@ -14,6 +14,8 @@ Style/ClassAndModuleChildren:
   Enabled: false
 Style/IfUnlessModifier:
   Enabled: false
+Style/EmptyMethod:
+  Enabled: false
 Style/ConditionalAssignment:
   EnforcedStyle: assign_inside_condition
 Layout/MultilineMethodCallIndentation:

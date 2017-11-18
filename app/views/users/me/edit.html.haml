@@ -1,0 +1,11 @@
+.ui.two.column.centered.grid
+  .column
+    = render "shared/notice"
+    %h2.ui.dividing.header.title
+      Edit Profile
+    = form_for @user, url: :users_me, html: { class: 'ui form' } do |f|
+      .field
+        = f.label :email
+        = f.text_field :email, required: true, autocomplete: 'off'
+      .field
+        = f.submit 'Update', class: 'ui primary button'

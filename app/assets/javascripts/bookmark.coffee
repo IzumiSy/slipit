@@ -28,3 +28,8 @@ $(document).on 'turbolinks:load', ->
     $('#new-tag-modal').modal 'show'
   $('#add-bookmark').on 'click', (e) ->
     $('#new-bookmark-modal').modal 'show'
+
+  $('#delete-bookmarks').on 'click', (e) ->
+    $('#delete-bookmarks-modal').modal 'show'
+  $('#delete-account').on 'click', (e) ->
+    $('#delete-account-modal').modal 'show'

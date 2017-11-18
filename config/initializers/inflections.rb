@@ -11,5 +11,5 @@
 # end
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
-  inflect.uncountable %w[activation password_reset]
+  inflect.uncountable %w[me activation password_reset]
 end

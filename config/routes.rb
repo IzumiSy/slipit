@@ -13,11 +13,14 @@ Rails.application.routes.draw do
   namespace :users do
     resources :activation, only: %i[show], param: :token, path: :activate
     resource :password_reset, only: %i[create new], path: :password_reset
+    resource :me, only: %i[show edit update destroy] do
+      resource :bookmarks, only: %i[destroy]
+    end
   end
 
   resources :users, only: %i[] do
     scope module: :users do
-      resource :password_reset, only: %i[create edit update]
+      resource :password_reset, only: %i[edit update]
     end
   end
 

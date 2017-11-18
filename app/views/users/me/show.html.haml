@@ -1,0 +1,62 @@
+.ui.mini.modal#delete-bookmarks-modal
+  .header
+    Delete all bookmarks
+  .content
+    %p
+      Are you sure you will
+      %b delete all your bookmarks
+      ?
+  .actions
+    .ui.button.cancel
+      Cancel
+    = link_to "Proceed", users_me_bookmarks_path,
+        class: "ui button red ok", method: :delete
+
+.ui.mini.modal#delete-account-modal
+  .header
+    Delete my account
+  .content
+    %p
+      Are you sure you will
+      %b delete your account
+      ?
+  .actions
+    .ui.button.cancel
+      Cancel
+    = link_to "Proceed", users_me_path,
+        class: "ui button red ok", method: :delete
+
+.ui.two.column.centered.grid
+  .column
+    = render "shared/notice"
+    %h2.ui.dividing.header.title
+      Profile
+      = link_to 'Edit', edit_users_me_path, class: "ui right floated small positive button"
+    %table.ui.basic.table
+      %tbody
+        %tr
+          %td
+            %b E-mail
+          %td
+            = @user.email
+        %tr
+          %td
+            %b Bookmarks
+          %td
+            = @user.bookmark_counts
+        %tr
+          %td
+            %b Tags
+          %td
+            N/A
+    %h3.ui.dividing.header
+      Danger Zone
+    %p
+      %i.icon.warning.sign
+      Processes below can endanger your data
+    %p
+      %button#delete-bookmarks.ui.red.button
+        Delete all bookmarks
+    %p
+      %button#delete-account.ui.red.button
+        Delete my account

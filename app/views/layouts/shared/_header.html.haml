@@ -20,6 +20,7 @@
           Preference
           %i.dropdown.icon
           .menu
+            = link_to "Profile", users_me_path, class: "item"
             = link_to "Bookmarklet", bookmarklet_path, class: "item"
             .divider
             = link_to "About", landing_path, class: "item"
