@@ -12,9 +12,12 @@
 
 ## Setup
 ```sh
+$ bundle install
+$ npm install
 $ bundle exec rake db:create
 $ bundle exec rake db:migrate
 ```
+Slip.it also needs `redis` and `memcached`.
 
 ### Run
 ```sh
