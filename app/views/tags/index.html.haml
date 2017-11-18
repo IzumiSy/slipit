@@ -10,7 +10,7 @@
 = render "shared/alert"
 = render "shared/notice"
 %h2.ui.dividing.header.title
-  = "Tags (#{current_user.tag_counts})"
+  = "Tags (#{@user.tag_counts})"
   %button#add-tag.positive.ui.right.floated.small.button
     Add a tag
 - if @tags.present?
