@@ -4,21 +4,15 @@ class Webpage
   end
 
   def description
-    og_description = @page
-      .at('meta[property="og:description"]')
-      &.attributes.try('content')&.value
-    content_description = @page
-      .at('meta[name="description"]')
-      &.attributes.try('content')&.value
-    binding.pry
-    og_description || content_description
+    @page
+      .at('meta[property="og:description"],meta[name="description"]')
+      &.attributes['content']&.value
+  rescue
+    ''
   end
 
   def title
-    if defined?(@page.title)
-      @page.title
-    else
-      '(no title)'
-    end
+    return '(no title)' unless defined?(@page.title)
+    @page.title
   end
 end
