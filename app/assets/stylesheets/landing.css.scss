@@ -1,3 +1,5 @@
+$grey: #808080;
+
 .landing {
   .masthead.segment {
     min-height: 650px;
@@ -53,7 +55,7 @@
     }
 
     i.quote {
-      color: grey;
+      color: $grey;
     }
 
     ul {
@@ -70,7 +72,7 @@
   }
 
   .background.image {
-    box-shadow: #808080 2px 2px 10px 0;
+    box-shadow: $grey 2px 2px 10px 0;
     margin-bottom: 30px;
     margin-top: 100px;
   }
@@ -83,6 +85,6 @@
     font-size: 18px;
     font-weight: normal;
     padding-left: 40px;
-    color: grey;
+    color: $grey;
   }
 }
