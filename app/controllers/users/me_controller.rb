@@ -13,9 +13,9 @@ class Users::MeController < ApplicationController
 
   def update
     if current_user.update(update_user_permitted_params)
-      redirect_to users_me_path, notice: "Your account has successfully updated"
+      redirect_to users_me_path, notice: 'Your account has successfully updated'
     else
-      redirect_to users_me_path, alert: "Failed to update your account"
+      redirect_to users_me_path, alert: 'Failed to update your account'
     end
   end
 
