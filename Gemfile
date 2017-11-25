@@ -43,6 +43,8 @@ group :development, :test do
 
   gem 'listen'
   gem 'spring'
+
+  gem 'rack-dev-mark'
 end
 
 group :production do
