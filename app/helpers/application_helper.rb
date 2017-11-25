@@ -9,8 +9,8 @@ module ApplicationHelper
       reverse: true,
       og: {
         site_name: 'Slip.it',
-        title: :title,
-        description: :description,
+        # title: :title,
+        # description: :description,
         type: 'website',
         url: 'http://slipit.me',
         image: image_url('logo_cloud_big.png')
