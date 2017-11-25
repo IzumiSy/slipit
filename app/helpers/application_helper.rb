@@ -8,8 +8,7 @@ module ApplicationHelper
       keywords: 'Bookmark, Social, Online',
       reverse: true,
       og: {
-        site_name: 'Slip.it',
-        title: :title,
+        title: 'Slip.it',
         description: :description,
         type: 'website',
         url: 'http://slipit.me',
