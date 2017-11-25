@@ -2,9 +2,10 @@ module ApplicationHelper
   def metatag_configs
     {
       site: 'Slip.it',
-      reverse: true,
+      title: 'Your online bookmarks never be social.',
       description: 'Your online bookmarks never be social.',
       keywords: 'Bookmark, Social, Online',
+      reverse: true,
       og: {
         title: 'Slip.it',
         type: 'website',

@@ -1,3 +1,5 @@
+- set_meta_tags title: ["Tags", @tag.name]
+
 %h2.ui.dividing.header.title
   = "#{@tag.name} (#{@tag.bookmark_counts})"
 - if @bookmarks.present?
