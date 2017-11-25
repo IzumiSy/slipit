@@ -2,11 +2,15 @@ module ApplicationHelper
   def metatag_configs
     {
       site: 'Slip.it',
-      reverse: true,
-      description: 'Your online bookmarks never be social.',
+      title: 'Your online bookmarks never be social.',
+      description: 'Sick and tired of the social network services out there?
+        We get you covered! Slip.it is the 100% private, simple online bookmarking service.',
       keywords: 'Bookmark, Social, Online',
+      reverse: true,
       og: {
-        title: 'Slip.it',
+        site_name: 'Slip.it',
+        title: :title,
+        description: :description,
         type: 'website',
         url: 'http://slipit.me',
         image: image_url('logo_small.png')

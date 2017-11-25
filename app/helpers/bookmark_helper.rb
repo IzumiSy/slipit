@@ -10,4 +10,12 @@ module BookmarkHelper
       nil
     end
   end
+
+  def set_meta_title
+    if @bookmark_search.query.present?
+      set_meta_tags title: ['Bookmarks', "\"#{@bookmark_search.query}\""]
+    else
+      set_meta_tags title: 'Bookmarks'
+    end
+  end
 end
