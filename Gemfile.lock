@@ -88,6 +88,7 @@ GEM
       railties (>= 3.2, < 5.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -290,6 +291,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2.1)
   dalli
   font-awesome-rails
+  google-analytics-rails
   haml-rails (~> 1.0)
   hirb
   jquery-rails
