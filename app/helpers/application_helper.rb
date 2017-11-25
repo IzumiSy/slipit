@@ -1,13 +1,14 @@
 module ApplicationHelper
   def metatag_configs
     {
-      title: 'Slip.it',
+      site: 'Slip.it',
+      reverse: true,
       description: 'Your online bookmarks never be social.',
       keywords: 'Bookmark, Social, Online',
       og: {
         title: 'Slip.it',
         type: 'website',
-        url: 'http://slipit.in',
+        url: 'http://slipit.me',
         image: image_url('logo_small.png')
       }
     }
