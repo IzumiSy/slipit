@@ -13,7 +13,7 @@ module ApplicationHelper
         type: 'website',
         url: 'http://slipit.me',
         image: image_url('logo_cloud_big.png')
-      },
+      }
     }
   end
 end
