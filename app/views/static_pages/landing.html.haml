@@ -11,6 +11,8 @@
           Slip.it
           %sup
             %sup beta
+        .sharer.header.item
+          %a.twitter-share-button{href: "https://twitter.com/share?ref_src=twsrc%5Etfw", data: { url: "http://slipit.me", show: { count: "false" } } } Tweet
         .right.item.small
           = link_to "Log in", sign_in_path, class: "ui inverted button"
     .ui.text.container.head
@@ -72,10 +74,11 @@
       = link_to sign_in_path, class: "ui large teal button" do
         Get Started
   .ui.inverted.vertical.footer.segment
-    .ui.container.center.center.aligned
+    .ui.container.center.aligned
       .copyright
-        © 2017 IzumiSy.
-      .sharer.float.right
-        %a.twitter-share-button{href: "https://twitter.com/share?ref_src=twsrc%5Etfw", data: { url: "http://slipit.me", show: { count: "false" } } } Tweet
+        © 2017 Maintained by
+        = link_to "@IzumiSy", "https://twitter.com/@sy_izumi"
+      .follow
+        %a.twitter-follow-button{href: "https://twitter.com/sy_izumi?ref_src=twsrc%5Etfw", data: { show: { count: "false" } } } Follow @sy_izumi
 
 %script{src: "https://platform.twitter.com/widgets.js", charset: "utf-8"}

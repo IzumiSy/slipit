@@ -87,4 +87,20 @@ $grey: #808080;
     font-weight: normal;
     padding-left: 40px;
   }
+
+  .sharer.header.item {
+    padding: 21px 5px !important;
+  }
+
+  .footer {
+    .copyright, .follow {
+      display: inline-table;
+    }
+
+    .follow {
+      position: relative;
+      top: 5px;
+      left: 5px;
+    }
+  }
 }
