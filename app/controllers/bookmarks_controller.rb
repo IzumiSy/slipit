@@ -3,8 +3,10 @@ class BookmarksController < ApplicationController
   before_action :prepare_current_user_tags, only: %i[new create edit update]
 
   def index
-    @new_bookmark = NewBookmarkForm.new
+    @bookmark_search = BookmarkSearchForm.new(bookmark_search_permitted_params)
+    @bookmark_search.user = current_user
     @bookmarks = @bookmark_search.call.order_by_created_at.eager_load(:tags)
+    @new_bookmark = NewBookmarkForm.new
     @user = current_user
   end
 
@@ -47,6 +49,10 @@ class BookmarksController < ApplicationController
 
   def prepare_current_user_tags
     @tags = current_user.tags.order_by_name
+  end
+
+  def bookmark_search_permitted_params
+    params[:bookmark_search_form]&.permit(:query)
   end
 
   def create_bookmark_permitted_params
