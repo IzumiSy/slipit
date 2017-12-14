@@ -52,7 +52,7 @@ class BookmarksController < ApplicationController
   end
 
   def bookmark_search_permitted_params
-    params[:bookmark_search_form]&.permit(:query)
+    params[:bookmark_search]&.permit(:query)
   end
 
   def create_bookmark_permitted_params
