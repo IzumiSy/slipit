@@ -5,6 +5,13 @@ class Bookmarks::UrlsController < ApplicationController
     new_bookmark =
       NewBookmarkForm.new(permitted_params)
 
+    if (bookmark = Bookmark.find_by(url: new_bookmark.url))
+      bookmark.created_at = Time.now
+      bookmark.save
+      redirect_to edit_bookmark_url(bookmark.id), notice: 'Submitted URL is already bookmarked'
+      return
+    end
+
     if new_bookmark.call
       redirect_to new_bookmark_url(new_bookmark.to_h)
     else
