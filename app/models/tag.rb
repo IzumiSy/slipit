@@ -8,11 +8,11 @@ class Tag < ApplicationRecord
   end
 
   scope :order_by_bookmark_counts, -> { order('bookmark_counts DESC') }
-  scope :order_by_name, ->(select: false) do
+  scope :order_by_name, lambda { |select: false|
     if select
       select(:name).order(:name)
     else
       order(:name)
     end
-  end
+  }
 end
