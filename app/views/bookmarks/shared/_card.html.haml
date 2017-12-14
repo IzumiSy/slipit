@@ -23,7 +23,7 @@
   .extra.content
     = bookmark.url
     .ui.mini.labels
-      - tag_names.each do |name|
+      - tags.each do |tag|
         .ui.label
-          = name
+          = tag.name
 

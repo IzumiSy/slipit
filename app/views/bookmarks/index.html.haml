@@ -18,7 +18,7 @@
 - if @bookmarks.present?
   .ui.four.stackable.cards.bookmark-list
     - @bookmarks.each_with_index do |bookmark, index|
-      = render "bookmarks/shared/card", bookmark: bookmark, tag_names: @tag_names[index]
+      = render "bookmarks/shared/card", bookmark: bookmark, tags: @tags[index]
 - else
   .ui.cube.shape.nobookmark-placeholder
     .sides
