@@ -1,6 +1,4 @@
 class BookmarksController < ApplicationController
-  include BookmarkSearch
-
   before_action :require_login
   before_action :prepare_current_user_tags, only: %i[new create edit update]
 
