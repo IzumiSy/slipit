@@ -7,6 +7,12 @@ class Tag < ApplicationRecord
     validates :bookmark_counts
   end
 
-  scope :order_by_name, -> { order(:name) }
   scope :order_by_bookmark_counts, -> { order('bookmark_counts DESC') }
+  scope :order_by_name, ->(select: false) do
+    if select
+      select(:name).order(:name)
+    else
+      order(:name)
+    end
+  end
 end
