@@ -28,8 +28,8 @@ class Bookmarks::UpdateCounters
   end
 
   def update_bookmark_tags_counts(tags)
-    Tag.where(id: tags).each do |tag|
-      bookmark_counts = tag.bookmarks.count
+    Tag.where(id: tags).eager_load(:bookmarks).each do |tag|
+      bookmark_counts = tag.bookmarks.size
       if bookmark_counts.zero?
         tag.destroy
       else
