@@ -2,12 +2,10 @@ module BookmarkSearch
   extend ActiveSupport::Concern
 
   included do
-    before_action :prepare_bookmark_search
-  end
-
-  def prepare_bookmark_search
-    @bookmark_search = BookmarkSearchForm.new(bookmark_search_permitted_params)
-    @bookmark_search.user = current_user
+    before_action do
+      @bookmark_search = BookmarkSearchForm.new(bookmark_search_permitted_params)
+      @bookmark_search.user = current_user
+    end
   end
 
   private
