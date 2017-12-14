@@ -1,5 +1,5 @@
 = display_meta_tags metatag_configs
-= analytics_init if GoogleAnalytics.valid_tracker?
+= analytics_init if Rails.env.production? && GoogleAnalytics.valid_tracker?
 %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
 %link{rel: 'apple-touch-icon', sizes: '57x57', href: asset_path('icons/apple-icon-57x57.png')}
 %link{rel: 'apple-touch-icon', sizes: '60x60', href: asset_path('icons/apple-icon-60x60.png')}
