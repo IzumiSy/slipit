@@ -3,7 +3,7 @@ class Users::ActivationController < ApplicationController
     user = User.find_by!(activation_token: params.require(:token))
     user_activation = UserActivation.new(user: user)
 
-    if user_activation.is_activated?
+    if user_activation.activated?
       redirect_to sign_in_path, notice: 'Your account has already activated'
       return
     end

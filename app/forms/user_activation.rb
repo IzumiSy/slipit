@@ -3,7 +3,7 @@ class UserActivation < ApplicationForm
 
   validates :user, presence: true
 
-  def is_activated?
+  def activated?
     !!@user.activated_at
   end
 
