@@ -7,9 +7,6 @@ class Tag < ApplicationRecord
     validates :bookmark_counts
   end
 
-  after_create Tags::UpdateCounter.new
-  after_destroy Tags::UpdateCounter.new
-
   scope :order_by_name, -> { order(:name) }
   scope :order_by_bookmark_counts, -> { order('bookmark_counts DESC') }
 end
