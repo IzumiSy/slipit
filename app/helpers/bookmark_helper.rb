@@ -4,7 +4,7 @@ module BookmarkHelper
   end
 
   def bookmark_search
-    search = BookmarkSearchForm.new
+    search = BookmarkSearch.new
     search.user = current_user
     search
   end
