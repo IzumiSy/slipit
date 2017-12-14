@@ -16,13 +16,13 @@ class Bookmarks::UpdateCounters
   private
 
   def decrement_user_bookmark_counts(user_id)
-    if user = User.find(user_id)
+    if (user = User.find(user_id))
       user.decrement!(:bookmark_counts)
     end
   end
 
   def increment_user_bookmark_counts(user_id)
-    if user = User.find(user_id)
+    if (user = User.find(user_id))
       user.increment!(:bookmark_counts)
     end
   end
