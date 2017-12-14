@@ -13,7 +13,7 @@
       .right.menu
         .item
           .ui.transparent.inverted.icon.input
-            = form_for @bookmark_search, url: bookmarks_path, method: :get do |f|
+            = form_for bookmark_search, url: bookmarks_path, method: :get do |f|
               %i.search.icon
               = f.text_field :query
         .ui.simple.dropdown.item

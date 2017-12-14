@@ -1,4 +1,4 @@
-class BookmarkSearchForm < ApplicationForm
+class BookmarkSearch < ApplicationForm
   attr_accessor :query, :user
 
   validates :user, presence: true
