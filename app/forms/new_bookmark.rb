@@ -1,4 +1,4 @@
-class NewBookmarkForm < ApplicationForm
+class NewBookmark < ApplicationForm
   attr_accessor :url, :title, :description
 
   validates :url, presence: true, url: true
