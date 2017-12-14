@@ -6,7 +6,7 @@ class BookmarksController < ApplicationController
     @bookmark_search = BookmarkSearch.new(bookmark_search_permitted_params)
     @bookmark_search.user = current_user
     @bookmarks = @bookmark_search.call.order_by_created_at.eager_load(:tags)
-    @new_bookmark = NewBookmarkForm.new
+    @new_bookmark = NewBookmark.new
     @user = current_user
   end
 
