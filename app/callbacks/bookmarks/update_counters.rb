@@ -1,7 +1,7 @@
 class Bookmarks::UpdateCounters
   def after_create(bookmark)
     update_bookmark_tags_counts(bookmark.user.tags)
-    increase_user_bookmark_counts(bookmark.user.id)
+    increment_user_bookmark_counts(bookmark.user.id)
   end
 
   def after_update(bookmark)
@@ -10,7 +10,7 @@ class Bookmarks::UpdateCounters
 
   def after_destroy(bookmark)
     update_bookmark_tags_counts(bookmark.user.tags)
-    decrease_user_bookmark_counts(bookmark.user.id)
+    decrement_user_bookmark_counts(bookmark.user.id)
   end
 
   private
