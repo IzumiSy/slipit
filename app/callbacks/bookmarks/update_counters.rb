@@ -28,12 +28,13 @@ class Bookmarks::UpdateCounters
   end
 
   def update_bookmark_tags_counts(tags)
-    # Tags::BookmarkCounterJob.perform_later(tags.pluck(:id))
-
     Tag.where(id: tags).each do |tag|
       bookmark_counts = tag.bookmarks.count
-      tag.update(bookmark_counts: bookmark_counts)
-      tag.destroy if bookmark_counts.zero?
+      if bookmark_counts.zero?
+        tag.destroy
+      else
+        tag.update(bookmark_counts: bookmark_counts)
+      end
     end
   end
 end
