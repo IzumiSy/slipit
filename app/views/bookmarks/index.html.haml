@@ -17,8 +17,8 @@
     Add a new bookmark
 - if @bookmarks.present?
   .ui.four.stackable.cards.bookmark-list
-    - @bookmarks.each do |bookmark|
-      = render "bookmarks/shared/card", bookmark: bookmark
+    - @bookmarks.each_with_index do |bookmark, index|
+      = render "bookmarks/shared/card", bookmark: bookmark, tag_names: @tag_names[index]
 - else
   .ui.cube.shape.nobookmark-placeholder
     .sides

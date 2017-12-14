@@ -7,6 +7,7 @@ class BookmarksController < ApplicationController
   def index
     @new_bookmark = NewBookmarkForm.new
     @bookmarks = @bookmark_search.call.order_by_created_at
+    @tag_names = @bookmarks.eager_load(:tags).map { |b| b.tags.order_by_name.pluck(:name) }
     @user = current_user
   end
 
