@@ -3,7 +3,7 @@ class Bookmarks::UrlsController < ApplicationController
 
   def create
     new_bookmark =
-      NewBookmarkForm.new(permitted_params)
+      NewBookmark.new(permitted_params)
 
     if (bookmark = current_user.bookmarks.find_by(url: new_bookmark.url))
       bookmark.created_at = Time.now
