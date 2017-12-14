@@ -3,6 +3,7 @@ module BookmarkSearch
 
   included do
     before_action do
+      return unless signed_in?
       @bookmark_search = BookmarkSearchForm.new(bookmark_search_permitted_params)
       @bookmark_search.user = current_user
     end
