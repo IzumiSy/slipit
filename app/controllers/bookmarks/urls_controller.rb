@@ -22,6 +22,6 @@ class Bookmarks::UrlsController < ApplicationController
   private
 
   def permitted_params
-    params.require(:new_bookmark_form).permit(:url)
+    params.require(:new_bookmark).permit(:url)
   end
 end
