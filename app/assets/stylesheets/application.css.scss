@@ -34,6 +34,13 @@ body {
   padding-bottom: 10px;
 }
 
+.new_bookmark_search #bookmark_search_query {
+  border: none;
+  background: grey;
+  color: white;
+  padding: 5px;
+}
+
 .nobookmark-placeholder {
   padding: 0;
   width: 100%;

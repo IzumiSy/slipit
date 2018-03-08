@@ -15,7 +15,7 @@
           .ui.transparent.inverted.icon.input
             = form_for bookmark_search, url: bookmarks_path, method: :get do |f|
               %i.search.icon
-              = f.text_field :query
+              = f.text_field :query, class: "query"
         .ui.simple.dropdown.item
           Preference
           %i.dropdown.icon
