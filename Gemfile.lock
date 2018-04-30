@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/doabit/semantic-ui-sass.git
-  revision: 7d97a3584ab677ff20ea887dbd2e03c4d0eb401d
+  revision: 68014cb2d32bcce07b3a0a7a9853910858b35fb8
   specs:
-    semantic-ui-sass (2.3.0.0)
+    semantic-ui-sass (2.3.1.2)
       sass (>= 3.2)
 
 GEM
@@ -57,7 +57,7 @@ GEM
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
-    byebug (10.0.1)
+    byebug (10.0.2)
     clearance (1.16.1)
       bcrypt
       email_validator (~> 1.4)
@@ -73,10 +73,10 @@ GEM
     concurrent-ruby (1.0.5)
     coolline (0.5.0)
       unicode_utils (~> 1.4)
-    crass (1.0.3)
-    dalli (2.7.7)
+    crass (1.0.4)
+    dalli (2.7.8)
     debug_inspector (0.0.3)
-    domain_name (0.5.20170404)
+    domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     email_validator (1.6.0)
       activemodel
@@ -84,8 +84,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.23)
-    font-awesome-rails (4.7.0.3)
-      railties (>= 3.2, < 5.2)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     google-analytics-rails (1.1.1)
@@ -108,7 +108,7 @@ GEM
       domain_name (~> 0.5)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jquery-rails (4.3.1)
+    jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
@@ -116,7 +116,7 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.6.0)
       launchy (~> 2.2)
-    letter_opener_web (1.3.3)
+    letter_opener_web (1.3.4)
       actionmailer (>= 3.2)
       letter_opener (~> 1.0)
       railties (>= 3.2)
@@ -138,7 +138,7 @@ GEM
       nokogiri (~> 1.6)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
-    meta-tags (2.8.0)
+    meta-tags (2.9.0)
       actionpack (>= 3.2.0, < 5.3)
     method_source (0.9.0)
     mime-types (3.1)
@@ -152,7 +152,7 @@ GEM
     mustermann (1.0.2)
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
-    newrelic_rpm (4.8.0.341)
+    newrelic_rpm (5.0.0.342)
     nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
@@ -170,11 +170,11 @@ GEM
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     public_suffix (3.0.2)
-    puma (3.11.3)
-    rack (2.0.4)
+    puma (3.11.4)
+    rack (2.0.5)
     rack-protection (2.0.1)
       rack
-    rack-test (0.8.3)
+    rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.1.4)
       actioncable (= 5.1.4)
@@ -233,7 +233,7 @@ GEM
       tilt (>= 1.1, < 3)
     search_cop (1.0.9)
       treetop
-    sexp_processor (4.10.1)
+    sexp_processor (4.11.0)
     sinatra (2.0.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -255,12 +255,12 @@ GEM
     tilt (2.0.8)
     treetop (1.6.10)
       polyglot (~> 0.3)
-    turbolinks (5.1.0)
+    turbolinks (5.1.1)
       turbolinks-source (~> 5.1)
     turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.8)
+    uglifier (4.1.10)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -271,7 +271,7 @@ GEM
       addressable
     vegas (0.1.11)
       rack (>= 1.0.0)
-    web-console (3.5.1)
+    web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
