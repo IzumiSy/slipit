@@ -1,0 +1,19 @@
+.ui.relaxed.divided.list
+  - bookmarks.each do |bookmark|
+    .item
+      %i.large.middle.aligned.icon
+        = image_tag favicon(bookmark.url)
+      .content
+        = link_to bookmark.title, bookmark.url, { class: "header", target: "_blank" }
+        .description= bookmark.description
+
+    .ui.mini.modal{ id: "remove-modal-#{bookmark.id}" }
+      .header
+        Remove a bookmark
+      .content
+        %p Are you sure you will delete this bookmark?
+      .actions
+        .ui.button.negative
+          No
+        = link_to bookmark_path(bookmark.id), method: :delete, class: "ui positive button" do
+          Yes

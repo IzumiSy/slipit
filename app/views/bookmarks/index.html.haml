@@ -11,14 +11,16 @@
 
 = render "shared/alert"
 = render "shared/notice"
+
 %h2.ui.dividing.header.title
   = search_title || "Bookmarks (#{@user.bookmark_counts})"
   %button#add-bookmark.positive.ui.right.floated.small.button
     Add a new bookmark
 - if @bookmarks.present?
-  .ui.four.stackable.cards.bookmark-list
-    - @bookmarks.each do |bookmark|
-      = render "bookmarks/shared/card", bookmark: bookmark
+  - if @is_listview
+    = render "bookmarks/shared/list_view", bookmarks: @bookmarks
+  - else
+    = render "bookmarks/shared/card_view", bookmarks: @bookmarks
 - else
   .ui.cube.shape.nobookmark-placeholder
     .sides

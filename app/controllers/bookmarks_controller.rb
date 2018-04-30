@@ -8,6 +8,7 @@ class BookmarksController < ApplicationController
     @bookmarks = @bookmark_search.call.order_by_created_at.eager_load(:tags)
     @new_bookmark = NewBookmark.new
     @user = current_user
+    @is_listview = session[:is_listview]
   end
 
   def new

@@ -1,0 +1,30 @@
+.ui.four.stackable.cards.bookmark-list
+  - bookmarks.each do |bookmark|
+    = link_to bookmark.url, { class: "bookmark-item card", target: "_blank" } do
+      .main.content
+        %i.right.floated.remove.icon{ data: { modal: bookmark.id } }
+        %i.right.floated.edit.icon{ data: { link: edit_bookmark_path(bookmark.id) } }
+        .header.ellipsis
+          = image_tag favicon(bookmark.url), class: "favicon"
+          = bookmark.title
+        .meta
+          = "#{distance_of_time_in_words(Time.now, bookmark.created_at)} ago"
+        .description
+          %p= bookmark.description
+      .extra.content
+        = bookmark.url
+        .ui.mini.labels
+          - bookmark.tags.order_by_name(select: true).each do |tag|
+            .ui.label
+              = tag.name
+
+    .ui.mini.modal{ id: "remove-modal-#{bookmark.id}" }
+      .header
+        Remove a bookmark
+      .content
+        %p Are you sure you will delete this bookmark?
+      .actions
+        .ui.button.negative
+          No
+        = link_to bookmark_path(bookmark.id), method: :delete, class: "ui positive button" do
+          Yes
