@@ -1,3 +1,5 @@
+$lightgreen: #21BA45;
+
 .dividing.header {
   .view-switcher {
     color: grey;
@@ -7,7 +9,7 @@
     font-size: 30px;
 
     &:hover {
-      color: #21BA45;
+      color: $lightgreen;
     }
   }
 }
