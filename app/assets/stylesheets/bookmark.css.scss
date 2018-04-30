@@ -14,6 +14,13 @@ $lightgreen: #21BA45;
   }
 }
 
+.bookmark-list.relaxed.divided.list {
+  .description {
+    font-size: small;
+    height: 16px;
+  }
+}
+
 .bookmark-list.ui.cards .card {
   cursor: pointer;
 

@@ -1,11 +1,11 @@
-.ui.relaxed.divided.list
+.ui.relaxed.divided.list.bookmark-list
   - bookmarks.each do |bookmark|
     .item
       %i.large.middle.aligned.icon
         = image_tag favicon(bookmark.url)
       .content
-        = link_to bookmark.title, bookmark.url, { class: "header", target: "_blank" }
-        .description= bookmark.description
+        = link_to bookmark.title, bookmark.url, { class: "header ellipsis1", target: "_blank" }
+        .description.ellipsis1= bookmark.description
 
     .ui.mini.modal{ id: "remove-modal-#{bookmark.id}" }
       .header

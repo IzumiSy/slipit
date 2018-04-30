@@ -4,12 +4,12 @@
       .main.content
         %i.right.floated.remove.icon{ data: { modal: bookmark.id } }
         %i.right.floated.edit.icon{ data: { link: edit_bookmark_path(bookmark.id) } }
-        .header.ellipsis
+        .header.ellipsis3
           = image_tag favicon(bookmark.url), class: "favicon"
           = bookmark.title
         .meta
           = "#{distance_of_time_in_words(Time.now, bookmark.created_at)} ago"
-        .description
+        .description.ellipsis2
           %p= bookmark.description
       .extra.content
         = bookmark.url
