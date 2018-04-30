@@ -17,17 +17,12 @@ $ npm install
 $ bundle exec rake db:create
 $ bundle exec rake db:migrate
 ```
-Slip.it also needs `redis` and `memcached`.
+Slip.it also needs `memcached`.
 
 ### Run
 ```sh
 $ bundle exec rails dev:cache
 $ bundle exec rails s
-```
-
-#### Worker
-```sh
-$ TERM_CHILD=1 QUEUES=* bundle exec rake environment resque:work
 ```
 
 ## Contribution
