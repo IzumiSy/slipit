@@ -16,6 +16,8 @@
   = search_title || "Bookmarks (#{@user.bookmark_counts})"
   %button#add-bookmark.positive.ui.right.floated.small.button
     Add a new bookmark
+  = link_to bookmarks_path({ vl: @is_listview.present? ? nil : 1 }) do
+    %i.right.floated.fa.fa-th-list.view-switcher
 - if @bookmarks.present?
   - if @is_listview
     = render "bookmarks/shared/list_view", bookmarks: @bookmarks
