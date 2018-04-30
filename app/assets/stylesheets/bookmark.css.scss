@@ -1,3 +1,19 @@
+$lightgreen: #21BA45;
+
+.dividing.header {
+  .view-switcher {
+    color: grey;
+    float: right;
+    margin-right: 10px;
+    line-height: 1.28;
+    font-size: 30px;
+
+    &:hover {
+      color: $lightgreen;
+    }
+  }
+}
+
 .bookmark-list.ui.cards .card {
   cursor: pointer;
 

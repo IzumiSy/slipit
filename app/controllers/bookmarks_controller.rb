@@ -3,6 +3,7 @@ class BookmarksController < ApplicationController
   before_action :prepare_current_user_tags, only: %i[new create edit update]
 
   def index
+    @is_listview = params[:vl]
     @bookmark_search = BookmarkSearch.new(bookmark_search_permitted_params)
     @bookmark_search.user = current_user
     @bookmarks = @bookmark_search.call.order_by_created_at.eager_load(:tags)
