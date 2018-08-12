@@ -29,7 +29,7 @@ gem 'newrelic_rpm'
 
 # For secutiry reasons
 gem 'sinatra', '~> 2.0.2'
-gem 'sprockets','~> 3.7.2'
+gem 'sprockets', '~> 3.7.2'
 
 group :development, :test do
   gem 'sqlite3'
