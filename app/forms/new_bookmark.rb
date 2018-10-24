@@ -3,12 +3,18 @@ class NewBookmark < ApplicationForm
 
   validates :url, presence: true, url: true
 
+  Result = Struct.new(:failed?, :reason)
+
   def call
     validate!
     resolve!
-    true
+    succeeded
   rescue ActiveModel::ValidationError
-    false
+    failed 'Please check if the provided URL is valid.'
+  rescue Mechanize::UnauthorizedError
+    failed 'Provided URL looks to require authorization.'
+  rescue StandardError
+    failed 'This is an internal server error.'
   end
 
   def to_h
@@ -23,7 +29,13 @@ class NewBookmark < ApplicationForm
     webpage = Webpage.new(scraper.page)
     @title = webpage.title
     @description = webpage.description
-  rescue Mechanize::ResponseCodeError => e
-    @title = e.page.title
+  end
+
+  def succeeded
+    Result.new(false, nil)
+  end
+
+  def failed(reason)
+    Result.new(true, reason)
   end
 end
