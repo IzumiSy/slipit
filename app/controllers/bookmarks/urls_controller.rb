@@ -14,7 +14,7 @@ class Bookmarks::UrlsController < ApplicationController
 
     result = new_bookmark.call
     if result.failed?
-      redirect_to bookmarks_path, alert: result.reason and return
+      redirect_to bookmarks_path, alert: result.reason && return
     end
 
     redirect_to new_bookmark_url(new_bookmark.to_h)

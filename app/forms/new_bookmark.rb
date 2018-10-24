@@ -10,11 +10,11 @@ class NewBookmark < ApplicationForm
     resolve!
     succeeded
   rescue ActiveModel::ValidationError
-    failed("Please check if the provided URL is valid.")
+    failed 'Please check if the provided URL is valid.'
   rescue Mechanize::UnauthorizedError
-    failed("Provided URL looks to require authorization.")
+    failed 'Provided URL looks to require authorization.'
   rescue
-    failed("This is an internal server error.")
+    failed 'This is an internal server error.'
   end
 
   def to_h
