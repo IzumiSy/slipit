@@ -10,13 +10,10 @@
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 ## Setup
+Make sure that you have already installed PostgreSQL and Memcached
 ```sh
-$ bundle install
-$ npm install
-$ bundle exec rake db:create
-$ bundle exec rake db:migrate
+$ bin/setup
 ```
-Slip.it also needs `memcached`.
 
 ### Run
 ```sh
