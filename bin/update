@@ -16,7 +16,10 @@ chdir APP_ROOT do
 
   puts '== Installing dependencies =='
   system! 'gem install bundler --conservative'
-  system('bundle check') || system!('bundle install')
+  system('bundle check') || system!('bundle install --path vendor/bundle')
+
+  puts "\n== Installing JavaScripts dependencies =="
+  system('npm install')
 
   puts "\n== Updating database =="
   system! 'bin/rails db:migrate'
