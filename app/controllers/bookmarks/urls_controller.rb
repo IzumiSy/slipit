@@ -12,11 +12,12 @@ class Bookmarks::UrlsController < ApplicationController
       return
     end
 
-    if new_bookmark.call
-      redirect_to new_bookmark_url(new_bookmark.to_h)
-    else
-      redirect_to bookmarks_path, alert: 'Failed to add a new bookmark'
+    result = new_bookmark.call
+    if result.failed?
+      redirect_to bookmarks_path, alert: result.reason and return
     end
+
+    redirect_to new_bookmark_url(new_bookmark.to_h)
   end
 
   private
