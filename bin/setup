@@ -18,9 +18,8 @@ chdir APP_ROOT do
   system! 'gem install bundler --conservative'
   system('bundle check') || system!('bundle install --path vendor/bundle')
 
-  # Install JavaScript dependencies if using Yarn
-  # system('bin/yarn')
-
+  puts "\n== Installing JavaScripts dependencies =="
+  system('npm install')
 
   # puts "\n== Copying sample files =="
   # unless File.exist?('config/database.yml')
