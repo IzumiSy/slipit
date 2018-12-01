@@ -28,6 +28,8 @@ gem 'validate_url'
 gem 'newrelic_rpm'
 
 # For secutiry reasons
+gem 'loofah', '>= 2.2.3'
+gem 'rack', '>= 2.0.6'
 gem 'sinatra', '~> 2.0.2'
 gem 'sprockets', '~> 3.7.2'
 
