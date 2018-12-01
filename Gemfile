@@ -30,6 +30,8 @@ gem 'newrelic_rpm'
 # For secutiry reasons
 gem 'sinatra', '~> 2.0.2'
 gem 'sprockets', '~> 3.7.2'
+gem 'loofah', '>= 2.2.3'
+gem 'rack', '>= 2.0.6'
 
 group :development, :test do
   gem 'sqlite3'
