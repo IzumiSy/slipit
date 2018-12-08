@@ -4,7 +4,7 @@ ruby '2.5.1'
 
 gem 'dalli'
 gem 'puma'
-gem 'rails', '5.1.4'
+gem 'rails', '~> 5.1.6'
 gem 'resque'
 
 gem 'clearance'
@@ -28,6 +28,7 @@ gem 'validate_url'
 gem 'newrelic_rpm'
 
 # For secutiry reasons
+gem 'activejob', '>= 5.1.6.1'
 gem 'loofah', '>= 2.2.3'
 gem 'rack', '>= 2.0.6'
 gem 'sinatra', '~> 2.0.2'
