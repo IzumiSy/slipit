@@ -13,7 +13,8 @@ class NewBookmark < ApplicationForm
     failed 'Please check if the provided URL is valid.'
   rescue Mechanize::UnauthorizedError
     failed 'Provided URL looks to require authorization.'
-  rescue StandardError
+  rescue StandardError => e
+    logger.error e.message
     failed 'This is an internal server error.'
   end
 
