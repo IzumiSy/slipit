@@ -21,7 +21,7 @@ gem 'sass-rails', '~> 5.0.5'
 
 gem 'font-awesome-rails'
 gem 'meta-tags'
-gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem 'semantic-ui-sass'
 
 gem 'validate_url'
 
