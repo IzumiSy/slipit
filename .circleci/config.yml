@@ -28,7 +28,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - setup_bundler
+      - setup_bundler:
           name: setup bundler 2
           command: |
             sudo gem update --system
