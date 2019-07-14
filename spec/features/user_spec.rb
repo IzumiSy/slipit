@@ -8,6 +8,7 @@ RSpec.feature "User", type: :feature do
 
   scenario 'can get logged in if activated' do
     visit root_path
+    take_screenshot
     click_on 'Log in'
     expect(page).to have_content 'Login to Slip.it'
 

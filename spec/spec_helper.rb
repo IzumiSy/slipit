@@ -96,3 +96,7 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+def take_screenshot
+  page.save_screenshot "tmp/test-results/screenshot-#{DateTime.now}.png"
+end
