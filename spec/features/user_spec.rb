@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.feature "User", type: :feature do
+  before do
+    WebMock.disable!
+  end
+
   background do
     create(:activated_user)
     create(:unactivated_user)
