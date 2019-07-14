@@ -50,11 +50,11 @@ group :development, :test do
   gem 'listen'
   gem 'spring'
 
-  gem 'rspec-rails'
-  gem 'webmock'
   gem 'capybara'
-  gem 'shoulda-matchers'
   gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'webmock'
 end
 
 gem 'web-console', group: :development
