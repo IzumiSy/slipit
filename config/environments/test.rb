@@ -42,4 +42,10 @@ Rails.application.configure do
 
   # Specifies session store
   config.session_store :cookie_store, key: '_slip_it_session'
+
+  # Settings for ActionMailer
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.perform_caching = true
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  # config.action_mailer.delivery_method = :letter_opener_web
 end

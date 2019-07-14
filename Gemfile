@@ -46,11 +46,18 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-coolline'
   gem 'pry-rails'
-  gem 'web-console'
 
   gem 'listen'
   gem 'spring'
+
+  gem 'rspec-rails'
+  gem 'webmock'
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
 end
+
+gem 'web-console', group: :development
 
 group :production do
   gem 'pg', '~> 0.18'
