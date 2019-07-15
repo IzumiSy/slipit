@@ -38,10 +38,14 @@ jobs:
             sudo gem install bundler
 
       - run:
-          name: install dependencies
+          name: install Ruby deps
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
-            npm install --no-progress
+
+      - run:
+          name: install JavaScript deps
+          command: |
+            npm install
 
       - save_cache:
           paths:
