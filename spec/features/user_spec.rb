@@ -24,6 +24,7 @@ RSpec.feature "User", type: :feature do
 
   scenario 'can not get logged in if not activated' do
     visit root_path
+    take_screenshot
     click_on 'Log in'
     expect(page).to have_content 'Login to Slip.it'
 
@@ -35,6 +36,7 @@ RSpec.feature "User", type: :feature do
 
   scenario 'can not get logged in if not registered' do
     visit root_path
+    take_screenshot
     click_on 'Log in'
     expect(page).to have_content 'Login to Slip.it'
 

@@ -51,12 +51,6 @@ jobs:
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
 
-      # run chromedriver beforehand
-      - run:
-        name: run chromedriver
-        command: chromedriver
-        background: true
-
       # run tests!
       - run:
           name: run tests
