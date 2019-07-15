@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "User", type: :feature, js: true do
+RSpec.feature "User", type: :feature do
   before do
     WebMock.disable!
   end
