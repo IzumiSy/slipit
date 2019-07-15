@@ -21,7 +21,7 @@ gem 'sass-rails', '~> 5.0.5'
 
 gem 'font-awesome-rails'
 gem 'meta-tags'
-gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem 'semantic-ui-sass'
 
 gem 'validate_url'
 
@@ -46,11 +46,20 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-coolline'
   gem 'pry-rails'
-  gem 'web-console'
 
   gem 'listen'
   gem 'spring'
+
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'webdrivers'
+  gem 'webmock'
 end
+
+gem 'web-console', group: :development
 
 group :production do
   gem 'pg', '~> 0.18'
