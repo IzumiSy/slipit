@@ -98,5 +98,5 @@ RSpec.configure do |config|
 end
 
 def take_screenshot
-  page.save_screenshot "tmp/test-results/screenshot-#{DateTime.now}.png"
+  page.save_screenshot "/tmp/test-results/screenshot-#{DateTime.now}.png"
 end
