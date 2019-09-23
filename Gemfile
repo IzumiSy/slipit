@@ -26,6 +26,7 @@ gem 'semantic-ui-sass'
 gem 'validate_url'
 
 gem 'newrelic_rpm'
+gem 'turnout'
 
 # For secutiry reasons
 gem 'activejob', '>= 5.1.6.1'
