@@ -6,10 +6,10 @@
     .content
       Login to Slip.it
       %h5 Your online bookmarks never be social.
-  - if notice
+  - if alert
     .ui.warning.message
       .header
-        = simple_format notice, {}, wrapper_tag: 'div'
+        = simple_format alert, {}, wrapper_tag: 'div'
   = form_for :session, url: session_path, html: { class: "ui large form" } do |f|
     .ui.stacked.segment
       .ui.field
