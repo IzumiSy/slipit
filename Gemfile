@@ -44,8 +44,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'hirb'
+
   gem 'pry-byebug'
-  gem 'pry-coolline'
+  # gem 'pry-coolline'
   gem 'pry-rails'
 
   gem 'listen'
