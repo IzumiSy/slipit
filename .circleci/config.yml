@@ -31,8 +31,8 @@ jobs:
       - run:
           name: update bundler
           command: |
-            gem update --system
-            gem install bundler
+            sudo gem update --system
+            sudo gem install bundler
 
       - run:
           name: install Ruby deps
