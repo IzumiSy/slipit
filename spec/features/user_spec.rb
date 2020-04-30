@@ -17,9 +17,9 @@ RSpec.feature "User", type: :feature do
 
     fill_in 'session_email', with: 'activated_user@example.com'
     fill_in 'session_password', with: 'password'
-    take_screenshot
-
     click_on 'Login'
+
+    take_screenshot
     expect(page).to have_content 'Add a new bookmark'
   end
 
@@ -30,9 +30,9 @@ RSpec.feature "User", type: :feature do
 
     fill_in 'session_email', with: 'unactivated_user@example.com'
     fill_in 'session_password', with: 'password'
-    take_screenshot
-
     click_on 'Login'
+
+    take_screenshot
     expect(page).to have_content 'You must confirm your email address'
   end
 
@@ -43,9 +43,9 @@ RSpec.feature "User", type: :feature do
 
     fill_in 'session_email', with: 'unregistered_user@example.com'
     fill_in 'session_password', with: 'password'
-    take_screenshot
-
     click_on 'Login'
+
+    take_screenshot
     expect(page).to have_content 'Bad email or password'
   end
 end
