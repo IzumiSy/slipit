@@ -67,8 +67,10 @@ class BookmarksController < ApplicationController
     Rails.cache.delete(bookmarks_cache_key)
 
     # fragment caches used in index.html.haml
-    Rails.cache.delete("#{bookmarks_cache_key}/view/list")
-    Rails.cache.delete("#{bookmarks_cache_key}/view/card")
+    Rails.cache.delete("views/#{bookmarks_cache_key}/list")
+    Rails.cache.delete("views/#{bookmarks_cache_key}/card")
+
+    logger.info("All cache invalidated")
   end
 
   def prepare_current_user_tags
