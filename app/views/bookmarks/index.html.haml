@@ -20,9 +20,11 @@
     %i.right.floated.fa.fa-th-list.view-switcher
 - if @bookmarks.present?
   - if @is_listview
-    = render "bookmarks/shared/list_view", bookmarks: @bookmarks
+    - cache("#{current_user.id}/bookmarks/list", skip_digest: true) do
+      = render "bookmarks/shared/list_view", bookmarks: @bookmarks
   - else
-    = render "bookmarks/shared/card_view", bookmarks: @bookmarks
+    - cache("#{current_user.id}/bookmarks/card", skip_digest: true) do
+      = render "bookmarks/shared/card_view", bookmarks: @bookmarks
 - else
   .ui.cube.shape.nobookmark-placeholder
     .sides
