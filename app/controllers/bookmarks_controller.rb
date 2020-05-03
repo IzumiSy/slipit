@@ -70,7 +70,7 @@ class BookmarksController < ApplicationController
     Rails.cache.delete("views/#{bookmarks_cache_key}/list")
     Rails.cache.delete("views/#{bookmarks_cache_key}/card")
 
-    logger.info("All cache invalidated")
+    logger.info('All cache invalidated')
   end
 
   def prepare_current_user_tags
