@@ -5,18 +5,21 @@ RSpec.feature "Bookmark", type: :feature do
     WebMock.disable!
   end
 
-  background do
-    create(:activated_user)
-  end
-
-  scenario 'can submit a new bookmark' do
+  def login_as_activated_user
     visit root_path
     click_on 'Log in'
 
     fill_in 'session_email', with: 'activated_user@example.com'
     fill_in 'session_password', with: 'password'
     click_on 'Login'
+  end
 
+  scenario 'can submit a new bookmark' do
+    create(:activated_user)
+
+    login_as_activated_user
+
+    expect(page).to have_content 'Bookmarks (0)'
     click_on 'Add a new bookmark'
 
     fill_in 'new_bookmark_url', with: 'https://example.com'
@@ -31,5 +34,21 @@ RSpec.feature "Bookmark", type: :feature do
 
     click_on 'Submit'
     expect(page).to have_content 'New bookmark added'
+    expect(page).to have_content 'Bookmarks (1)'
+  end
+
+  scenario 'can delete a bookmark' do
+    create(:bookmark)
+
+    login_as_activated_user
+
+    expect(page).to have_content 'Bookmarks (1)'
+
+    find("i.right.floated.remove.icon[data-model='1']").click
+    expect(page).to have_content 'Remove a bookmark'
+
+    click_on 'Yes'
+    expect(page).to have_content 'Bookmark removed'
+    expect(page).to have_content 'Bookmarks (0)'
   end
 end

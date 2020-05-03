@@ -14,6 +14,7 @@ FactoryBot.define do
 
   factory :bookmark do
     association :user, factory: :activated_user
+    id { "1" }
     title { 'hoge' }
     url { 'https://example.com' }
   end
