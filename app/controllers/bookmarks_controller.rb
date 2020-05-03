@@ -17,7 +17,7 @@ class BookmarksController < ApplicationController
     # memacached can save values only up to 4mb, so a little worried about
     # users who have many bookmarks that outnumber assumed memcache's capacity.
     @bookmarks =
-      Rails.cache.fetch(bookmarks_cache_key, expired_in: 365.days) do
+      Rails.cache.fetch(bookmarks_cache_key) do
         @bookmark_search.call.order_by_created_at.eager_load(:tags)
       end
   end
@@ -65,6 +65,10 @@ class BookmarksController < ApplicationController
 
   def invalidate_bookmarks_cache
     Rails.cache.delete(bookmarks_cache_key)
+
+    # fragment caches used in index.html.haml
+    Rails.cache.delete("#{bookmarks_cache_key}/view/list")
+    Rails.cache.delete("#{bookmarks_cache_key}/view/card")
   end
 
   def prepare_current_user_tags
