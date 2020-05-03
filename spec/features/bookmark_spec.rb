@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Bookmark", type: :feature do
+RSpec.feature 'Bookmark', type: :feature do
   before do
     WebMock.disable!
   end
