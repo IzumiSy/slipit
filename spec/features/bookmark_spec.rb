@@ -43,6 +43,8 @@ RSpec.feature 'Bookmark', type: :feature do
     login_as_activated_user
 
     expect(page).to have_content 'Bookmarks (1)'
+
+    find(".bookmark-item.card").first.hover
     take_screenshot
 
     find("i.right.floated.remove.icon[data-model='1']").click
