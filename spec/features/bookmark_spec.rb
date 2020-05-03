@@ -43,6 +43,7 @@ RSpec.feature "Bookmark", type: :feature do
     login_as_activated_user
 
     expect(page).to have_content 'Bookmarks (1)'
+    take_screenshot
 
     find("i.right.floated.remove.icon[data-model='1']").click
     expect(page).to have_content 'Remove a bookmark'
