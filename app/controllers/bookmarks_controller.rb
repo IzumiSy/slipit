@@ -14,8 +14,8 @@ class BookmarksController < ApplicationController
     @bookmark_search.user = current_user
 
     # Currently, this application uses memcached as a primary cache store.
-    # memacached can save values which are up to 4mb, so a little worried about
-    # users who have many bookmarks that outnumber  memcache's capacity.
+    # memacached can save values only up to 4mb, so a little worried about
+    # users who have many bookmarks that outnumber assumed memcache's capacity.
     @bookmarks =
       Rails.cache.fetch(bookmarks_cache_key, expired_in: 365.days) do
         @bookmark_search.call.order_by_created_at.eager_load(:tags)
