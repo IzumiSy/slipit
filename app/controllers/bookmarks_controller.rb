@@ -2,13 +2,24 @@ class BookmarksController < ApplicationController
   before_action :require_login
   before_action :prepare_current_user_tags, only: %i[new create edit update]
 
+  # I am not sure if this will be triggered even though actions fail or not...
+  after_action :invalidate_bookmarks_cache, only: %i[create update destroy]
+
   def index
     @is_listview = params[:vl]
-    @bookmark_search = BookmarkSearch.new(bookmark_search_permitted_params)
-    @bookmark_search.user = current_user
-    @bookmarks = @bookmark_search.call.order_by_created_at.eager_load(:tags)
     @new_bookmark = NewBookmark.new
     @user = current_user
+
+    @bookmark_search = BookmarkSearch.new(bookmark_search_permitted_params)
+    @bookmark_search.user = current_user
+
+    # Currently, this application uses memcached as a primary cache store.
+    # memacached can save values which are up to 4mb, so a little worried about
+    # users who have many bookmarks that outnumber  memcache's capacity.
+    @bookmarks =
+      Rails.cache.fetch(bookmarks_cache_key, expired_in: 365.days) do
+        @bookmark_search.call.order_by_created_at.eager_load(:tags)
+      end
   end
 
   def new
@@ -47,6 +58,14 @@ class BookmarksController < ApplicationController
   end
 
   private
+
+  def bookmarks_cache_key
+    "#{current_user.id}/bookmarks"
+  end
+
+  def invalidate_bookmarks_cache
+    Rails.cache.delete(bookmarks_cache_key)
+  end
 
   def prepare_current_user_tags
     @tags = current_user.tags.order_by_name
