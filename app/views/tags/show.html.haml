@@ -3,9 +3,7 @@
 %h2.ui.dividing.header.title
   = "#{@tag.name} (#{@tag.bookmark_counts})"
 - if @bookmarks.present?
-  .ui.four.stackable.cards.bookmark-list
-    - @bookmarks.each do |bookmark|
-      = render "bookmarks/shared/card", bookmark: bookmark
+  = render "bookmarks/shared/card_view", bookmarks: @bookmarks
 - else
   .ui.cube.shape.nobookmark-placeholder
     .sides
