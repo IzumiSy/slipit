@@ -44,14 +44,37 @@ RSpec.feature 'Bookmark', type: :feature do
 
     expect(page).to have_content 'Bookmarks (1)'
 
-    find(".bookmark-item.card").first.hover
+    find("a.bookmark-item.card").hover
     take_screenshot
 
-    find("i.right.floated.remove.icon[data-model='1']").click
+    find("i.right.floated.remove.icon[data-modal='1']").click
     expect(page).to have_content 'Remove a bookmark'
 
     click_on 'Yes'
     expect(page).to have_content 'Bookmark removed'
     expect(page).to have_content 'Bookmarks (0)'
+  end
+
+  scenario 'can edit a bookmark' do
+    create(:bookmark)
+
+    login_as_activated_user
+
+    expect(page).to have_content 'Bookmarks (1)'
+
+    find("a.bookmark-item.card").hover
+    take_screenshot
+
+    find("i.right.floated.edit.icon[data-link='/bookmarks/1/edit']").click
+
+    expect(page).to have_content 'Title'
+    expect(page).to have_selector("input#bookmark_title[value='hoge']")
+
+    expect(page).to have_content 'Url'
+    expect(page).to have_selector("input#bookmark_url[value='https://example.com']")
+
+    click_on 'Submit'
+    expect(page).to have_content 'Bookmark updated'
+    expect(page).to have_content 'Bookmarks (1)'
   end
 end
