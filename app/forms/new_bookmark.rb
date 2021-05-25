@@ -1,3 +1,5 @@
+require 'openssl'
+
 class NewBookmark < ApplicationForm
   attr_accessor :url, :title, :description
 
@@ -27,6 +29,7 @@ class NewBookmark < ApplicationForm
 
   def resolve!
     scraper = Mechanize.new
+    scraper.verify_mode = OpenSSL::SSL::VERIFY_NONE
     scraper.get(@url)
     webpage = Webpage.new(scraper.page)
     @title = webpage.title
