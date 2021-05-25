@@ -16,8 +16,7 @@ class NewBookmark < ApplicationForm
   rescue Mechanize::ResponseCodeError
     failed 'Provided URL is not found.'
   rescue StandardError => e
-    logger.error e.message
-    failed 'This is an internal server error.'
+    failed "Internal error: #{e.message}"
   end
 
   def to_h
