@@ -170,7 +170,7 @@ GEM
     minitest (5.17.0)
     mono_logger (1.1.1)
     multi_json (1.15.0)
-    mustermann (1.1.1)
+    mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.1)
@@ -197,7 +197,7 @@ GEM
     rack (2.2.6.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
-    rack-protection (2.0.8.1)
+    rack-protection (2.2.3)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -261,7 +261,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
     ruby_parser (3.16.0)
       sexp_processor (~> 4.15, >= 4.15.1)
     rubyntlm (0.6.3)
@@ -287,10 +287,10 @@ GEM
     sexp_processor (4.15.3)
     shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
-    sinatra (2.0.8.1)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.8.1)
+    sinatra (2.2.3)
+      mustermann (~> 2.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.3)
       tilt (~> 2.0)
     spring (2.1.1)
     sprockets (3.7.2)
@@ -304,7 +304,7 @@ GEM
     temple (0.8.2)
     thor (1.2.1)
     thread_safe (0.3.6)
-    tilt (2.0.10)
+    tilt (2.0.11)
     treetop (1.6.11)
       polyglot (~> 0.3)
     turbolinks (5.2.1)
@@ -386,7 +386,7 @@ DEPENDENCIES
   selenium-webdriver
   semantic-ui-sass
   shoulda-matchers
-  sinatra (~> 2.0.2)
+  sinatra (~> 2.2.3)
   spring
   sprockets (~> 3.7.2)
   sqlite3
